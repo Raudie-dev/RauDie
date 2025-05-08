@@ -58,7 +58,7 @@
     </div>
   </header>
 
-  <main>
+  <m>
     <!-- Hero Section -->
     <section id="hero" class="hero section">
       <div class="container">
@@ -295,11 +295,11 @@
           <span class="section-badge">Proyectos</span>
           <h2><span>Nuestros</span> <span class="highlight">Proyectos Destacados</span></h2>
         </div>
-
-        <div class="projects-grid">
-          <div class="project-card">
+        <div class="projects-page-grid">
+          <!-- Proyecto 1 -->
+          <div class="project-card" data-category="ecommerce web">
             <div class="project-image">
-              <img src="img/proyectos/proyecto-1.png" alt="Pagina-de-Noticias">
+              <img src="img/proyectos/proyecto-1.png" alt="E-commerce Panaderia Aroma y Sabor">
             </div>
             <div class="project-content">
               <h3>E-commerce | Panaderia Aroma y Sabor</h3>
@@ -311,18 +311,19 @@
                 <span>JavaScript</span>
                 <span>Python</span>
               </div>
-              <a href="proyectos/ecommerce.html" class="btn-text">Ver detalles</a>
+              <a href="#" class="btn-text view-details" data-project="1">Ver detalles</a>
             </div>
           </div>
 
-          <div class="project-card">
+          <!-- Proyecto 2 -->
+          <div class="project-card" data-category="web">
             <div class="project-image">
-              <img src="img/proyectos/proyecto-2.png" alt="Aplicación Web">
+              <img src="img/proyectos/proyecto-2.png" alt="Dashboard Administrativo">
             </div>
             <div class="project-content">
               <h3>Dashboard Administrativo | CEIP Mi Mundo Infantil</h3>
               <p>
-                Panel de control para gestión de los estudiantes, eventos academicos y administracion de los profesores
+                Panel de control para gestión de los estudiantes, eventos academicos y administracion de los profesores. 
               </p>
               <div class="project-tags">
                 <span>HTML</span>
@@ -330,27 +331,239 @@
                 <span>Django</span>
                 <span>SQLite3</span>
               </div>
-              <a href="proyectos/dashboard.html" class="btn-text">Ver detalles</a>
+              <a href="#" class="btn-text view-details" data-project="2">Ver detalles</a>
             </div>
           </div>
 
-          <div class="project-card">
+          <!-- Proyecto 3 -->
+          <div class="project-card" data-category="web">
             <div class="project-image">
-              <img src="img/proyectos/proyecto-3.png" alt="Landing Page Institucional">
+              <img src="img/proyectos/proyecto-3.png" alt="Portal Educativo">
             </div>
             <div class="project-content">
-                <h3>Landing Page | Mi Mundo Infantil</h3>
-                <p>Página informativa diseñada para una institución de educación inicial, destacando su misión, visión y servicios educativos. Una solución ideal para conectar con padres y representantes de manera efectiva.</p>
+              <h3>Landing Page | Mi Mundo Infantil</h3>
+              <p>
+                Página informativa diseñada para una institución de educación inicial, destacando su misión, visión y servicios educativos.
+              </p>
               <div class="project-tags">
                 <span>HTML</span>
                 <span>CSS</span>
                 <span>Bootstrap</span>
               </div>
-              <a href="proyectos/delivery-app.html" class="btn-text">Ver detalles</a>
+              <a href="#" class="btn-text view-details" data-project="3">Ver detalles</a>
+            </div>
+          </div>
+          
+          <!-- Modal para detalles del proyecto 1: E-commerce | Panaderia Aroma y Sabor -->
+          <div id="projectModal1" class="project-modal">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h3>E-commerce | Panaderia Aroma y Sabor</h3>
+                <button class="close-modal" aria-label="Cerrar">×</button>
+              </div>
+              <div class="modal-body">
+                <div class="carousel-container">
+                  <div class="carousel-main-image">
+                    <img id="mainImage1" src="img/modal-proyectos/aroma-header.jpg" alt="E-commerce Panaderia Aroma y Sabor">   
+                    <div class="carousel-caption">
+                      <h4 id="captionTitle1">E-commerce Panaderia Aroma y Sabor</h4>
+                      <p id="captionDesc1">Vista principal de la tienda online con productos destacados</p>
+                    </div>
+                    <div class="carousel-controls">
+                      <button class="carousel-arrow carousel-prev" aria-label="Anterior">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                          <polyline points="15 18 9 12 15 6"></polyline>
+                        </svg>
+                      </button>
+                      <button class="carousel-arrow carousel-next" aria-label="Siguiente">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                          <polyline points="9 18 15 12 9 6"></polyline>
+                        </svg>
+                      </button>
+                    </div>
+                  </div>
+                  
+                  <div class="carousel-thumbnails">
+                    <div class="carousel-thumbnail active" data-image="img/modal-proyectos/aroma-header.jpg" data-title="E-commerce Panaderia Aroma y Sabor" data-desc="Vista principal de la tienda online con productos destacados">
+                      <img src="img/modal-proyectos/aroma-header.jpg" alt="Vista principal">
+                    </div>
+                    <div class="carousel-thumbnail" data-image="img/modal-proyectos/aroma-productos.jpg" data-title="Catálogo de productos" data-desc="Sección que muestra todos los productos detallada que tiene la tienda disponible, con su respectiva descripcion">
+                      <img src="img/modal-proyectos/aroma-productos.jpg" alt="Catálogo de productos">
+                    </div>
+                    <div class="carousel-thumbnail" data-image="img/modal-proyectos/aroma-historia.jpg" data-title="Seccion de la Historia de la Tienda" data-desc="Esta seccion incluye la historia de nuestra tienda junto con imagenes de nuestras instalaciones">
+                      <img src="img/modal-proyectos/aroma-historia.jpg" alt="Carrito de compras">
+                    </div>
+                    <div class="carousel-thumbnail" data-image="img/modal-proyectos/aroma-menujpg.jpg" data-title="Menú" data-desc="Esta seccion permite al cliente ver el menu de la tienda, con sus respectivos precios yh lo que esta disponibe en este momento">
+                      <img src="img/modal-proyectos/aroma-menujpg.jpg" alt="Panel de administración">
+                    </div>
+                    <div class="carousel-thumbnail" data-image="img/modal-proyectos/aroma-contacto.jpg" data-title="Informacion de Contacto" data-desc="Esta seccion se añade la ubicacion de la tienda sus horarios y el contacto con el cliente, numero de telefono y correo electronico">
+                      <img src="img/modal-proyectos/aroma-contacto.jpg" alt="Proceso de checkout">
+                    </div>
+                  </div>
+                  
+                  <div class="carousel-info-grid">
+                    <div class="carousel-description">
+                      <h4>Descripción</h4>
+                      <p>
+                        Desarrollo de una tienda online completa para una panadería artesanal. El sitio incluye catálogo de productos, sistema de carrito de compras, proceso de checkout y panel de administración para gestionar productos, pedidos y clientes. La plataforma permite a los clientes realizar pedidos personalizados y programar entregas.
+                      </p>
+                    </div>
+                    <div class="carousel-meta">
+                      <h4>Detalles del Proyecto</h4>
+                      <ul class="meta-list">
+                        <li><strong>Cliente:</strong> <span>Panadería Aroma y Sabor</span></li>
+                        <li><strong>Fecha:</strong> <span>Octubre 2024</span></li>
+                        <li><strong>Categoría:</strong> <span>E-commerce</span></li>
+                        <li><strong>Tecnologías:</strong> <span>HTML, JavaScript, Python</span></li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Modal para detalles del proyecto 2: Dashboard Administrativo | CEIP Mi Mundo Infantil -->
+          <div id="projectModal2" class="project-modal">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h3>Dashboard Administrativo | CEIP Mi Mundo Infantil</h3>
+                <button class="close-modal" aria-label="Cerrar">×</button>
+              </div>
+              <div class="modal-body">
+                <div class="carousel-container">
+                  <div class="carousel-main-image">
+                    <img id="mainImage2" src="img/modal-proyectos/dashboard-MMI-Listado-Estuduantes.jpg" alt="Dashboard Administrativo">   
+                    <div class="carousel-caption">
+                      <h4 id="captionTitle2">Dashboard principal</h4>
+                      <p id="captionDesc2">Iniciamos en el rol del profesor donde dependiendiendo del aula que le toque, puede ver el listados de estudiantes agregados a su aula</p>
+                    </div>
+                    <div class="carousel-controls">
+                      <button class="carousel-arrow carousel-prev" aria-label="Anterior">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                          <polyline points="15 18 9 12 15 6"></polyline>
+                        </svg>
+                      </button>
+                      <button class="carousel-arrow carousel-next" aria-label="Siguiente">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                          <polyline points="9 18 15 12 9 6"></polyline>
+                        </svg>
+                      </button>
+                    </div>
+                  </div>
+                  
+                  <div class="carousel-thumbnails">
+                    <div class="carousel-thumbnail active" data-image="img/modal-proyectos/dashboard-MMI-Listado-Estuduantes.jpg" data-title="Dashboard principal" data-desc="Iniciamos en el rol del profesor donde dependiendiendo del aula que le toque, puede ver el listados de estudiantes agregados a su aula">
+                      <img src="img/modal-proyectos/dashboard-MMI-Listado-Estuduantes.jpg" alt="Dashboard principal">
+                    </div>
+                    <div class="carousel-thumbnail" data-image="img/modal-proyectos/dashboard-MMI-Gestion-Aulas.jpg" data-title="Gestión de las Aulas" data-desc="En el rol del director podemos ver todas las aulas que tenemos disponibles, y agregar o eliminar aulas y asignarle un profesor y ver el listado de estudiantes que tiene cada aula">
+                      <img src="img/modal-proyectos/dashboard-MMI-Gestion-Aulas.jpg" alt="Gestión de estudiantes">
+                    </div>
+                    <div class="carousel-thumbnail" data-image="img/modal-proyectos/dashboard-MMI-Comentarios-estudiantes.jpg" data-title="Cometarios de profesores" data-desc="En el rol del profesor podemos ver los cometarios que han dejado de sus estudiantes, el cual el director lleva un monitoreo de cada uno de los estudiantes">
+                      <img src="img/modal-proyectos/dashboard-MMI-Comentarios-estudiantes.jpg" alt="Calendario de eventos">
+                    </div>
+                    <div class="carousel-thumbnail" data-image="img/modal-proyectos/dashboard-MMI-configuracion-user.jpg" data-title="Configuracion del usuario" data-desc="Los usuarios pueden cambiar su contraseña y correo electronico para poder tener acceso a la plataforma, y el director puede ver los usuarios que tiene registrados en la plataforma">
+                      <img src="img/modal-proyectos/dashboard-MMI-configuracion-user.jpg" alt="Generación de reportes">
+                    </div>
+                  </div>
+                  
+                  <div class="carousel-info-grid">
+                    <div class="carousel-description">
+                      <h4>Descripción</h4>
+                      <p>
+                        Panel de control completo para la gestión académica de una institución educativa. El sistema permite administrar estudiantes, profesores, eventos académicos, calificaciones y comunicaciones. Incluye generación de reportes, seguimiento de asistencia y módulo de comunicación con padres y representantes.
+                      </p>
+                    </div>
+                    <div class="carousel-meta">
+                      <h4>Detalles del Proyecto</h4>
+                      <ul class="meta-list">
+                        <li><strong>Cliente:</strong> <span>CEIP Mi Mundo Infantil</span></li>
+                        <li><strong>Fecha:</strong> <span>Enero 2025</span></li>
+                        <li><strong>Categoría:</strong> <span>Aplicación Web</span></li>
+                        <li><strong>Tecnologías:</strong> <span>HTML, Python, Django, SQLite3</span></li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Modal para detalles del proyecto 3: Landing Page | Mi Mundo Infantil -->
+          <div id="projectModal3" class="project-modal">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h3>Landing Page | Mi Mundo Infantil</h3>
+                <button class="close-modal" aria-label="Cerrar">×</button>
+              </div>
+              <div class="modal-body">
+                <div class="carousel-container">
+                  <div class="carousel-main-image">
+                    <img id="mainImage3" src="img/modal-proyectos/MMI-header.jpg" alt="Landing Page Mi Mundo Infantil">   
+                    <div class="carousel-caption">
+                      <h4 id="captionTitle3">Página principal</h4>
+                      <p id="captionDesc3">Diseño atractivo con información clave de la institución</p>
+                    </div>
+                    <div class="carousel-controls">
+                      <button class="carousel-arrow carousel-prev" aria-label="Anterior">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                          <polyline points="15 18 9 12 15 6"></polyline>
+                        </svg>
+                      </button>
+                      <button class="carousel-arrow carousel-next" aria-label="Siguiente">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                          <polyline points="9 18 15 12 9 6"></polyline>
+                        </svg>
+                      </button>
+                    </div>
+                  </div>
+                  
+                  <div class="carousel-thumbnails">
+                    <div class="carousel-thumbnail active" data-image="img/modal-proyectos/MMI-header.jpg" data-title="Encabezado de la Pagina" data-desc="Diseño atractivo con información clave de la institución">
+                      <img src="img/modal-proyectos/MMI-header.jpg" alt="Página principal">
+                    </div>
+                    <div class="carousel-thumbnail" data-image="img/modal-proyectos/MMI-porque-elegirnos.jpg" data-title="Sección ¿Porque Elegirnos?" data-desc="Presentación de qe nos hace difernetes a las demás instituciones">
+                      <img src="img/modal-proyectos/MMI-porque-elegirnos.jpg" alt="Sección ¿Porque Elegirnos?">
+                    </div>
+                    <div class="carousel-thumbnail" data-image="img/modal-proyectos/MMI-programas.jpg" data-title="Servicios educativos" data-desc="Detalle de los programas y metodologías educativas">
+                      <img src="img/modal-proyectos/MMI-programas.jpg" alt="Servicios educativos">
+                    </div>
+                    <div class="carousel-thumbnail" data-image="img/modal-proyectos/MMI-reforzamiento.jpg" data-title="Seccion de Refozamiento Pedagogico" data-desc="Recorrido visual por las áreas de la institución">
+                      <img src="img/modal-proyectos/MMI-reforzamiento.jpg" alt="Refozamiento Pedagogico">
+                    </div>
+                    <div class="carousel-thumbnail" data-image="img/modal-proyectos/MMI-horarios.jpg" data-title="Horarios de la Institución" data-desc="Horarios de atención, actividades de clases y tareas dirigidas">
+                      <img src="img/modal-proyectos/MMI-horarios.jpg" alt="Horarios de la Institución">
+                    </div>
+                    <div class="carousel-thumbnail" data-image="img/modal-proyectos/MMI-Galeria.jpg" data-title="Galería de instalaciones" data-desc="Recorrido visual por las áreas de la institución y las actividades realizadas">
+                      <img src="img/modal-proyectos/MMI-Galeria.jpg" alt="Galería de instalaciones">
+                    </div>
+                    <div class="carousel-thumbnail" data-image="img/modal-proyectos/MMI-contactos.jpg" data-title="Formulario de contacto" data-desc="Sección para solicitar información adicional">
+                      <img src="img/modal-proyectos/MMI-contactos.jpg" alt="Formulario de contacto">
+                    </div>
+                  </div>
+                  
+                  <div class="carousel-info-grid">
+                    <div class="carousel-description">
+                      <h4>Descripción</h4>
+                      <p>
+                        Página informativa diseñada para una institución de educación inicial, destacando su misión, visión y servicios educativos. El sitio incluye secciones de presentación, galería de instalaciones, información sobre metodología educativa, testimonios de padres y formulario de contacto para solicitar información adicional.
+                      </p>
+                    </div>
+                    <div class="carousel-meta">
+                      <h4>Detalles del Proyecto</h4>
+                      <ul class="meta-list">
+                        <li><strong>Cliente:</strong> <span>CEIP Mi Mundo Infantil</span></li>
+                        <li><strong>Fecha:</strong> <span>Enero 2025</span></li>
+                        <li><strong>Categoría:</strong> <span>Sitio Web</span></li>
+                        <li><strong>Tecnologías:</strong> <span>HTML, CSS, Bootstrap</span></li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
-
         <div class="view-more-container">
           <a href="proyectos.html" class="btn-primary">Ver más proyectos</a>
         </div>

@@ -895,7 +895,7 @@ ul {
     margin-top: 0;
     margin-bottom: 15px;
     color: #333;
-    border-bottom: 2px solid var(--color-primary);
+    border-bottom: 2px solid;
     padding-bottom: 8px;
     display: inline-block;
   }
