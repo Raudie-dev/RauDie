@@ -266,15 +266,10 @@ document.addEventListener("DOMContentLoaded", () => {
       }
     })
   })
-})
 
-// Método 4: Asegurarse de que el preloader se oculte incluso si hay problemas
-window.onload = hidePreloader
-
-/**
- * Filtrado de proyectos
- */
-document.addEventListener("DOMContentLoaded", () => {
+  /**
+   * Filtrado de proyectos
+   */
   const filterButtons = document.querySelectorAll(".filter-btn")
   const projectCards = document.querySelectorAll(".project-card")
 
@@ -325,4 +320,140 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // Inicializar con el filtro "all" activo
   filterProjects("all")
+
+  /**
+   * Modales de proyectos
+   */
+  // Botones "Ver detalles"
+  document.querySelectorAll(".view-details").forEach((button) => {
+    button.addEventListener("click", (e) => {
+      e.preventDefault()
+      const projectId = button.getAttribute("data-project")
+      openProjectModal(projectId)
+    })
+  })
+
+  // Función para abrir el modal del proyecto
+  function openProjectModal(projectId) {
+    const modal = document.getElementById(`projectModal${projectId}`)
+    if (modal) {
+      modal.classList.add("active")
+      document.body.style.overflow = "hidden" // Prevenir scroll
+
+      // Inicializar el carrusel cuando se abre el modal
+      setupCarousel(projectId)
+    }
+  }
+
+  // Función para cerrar el modal
+  function closeProjectModal(modal) {
+    modal.classList.remove("active")
+    document.body.style.overflow = "" // Restaurar scroll
+  }
+
+  // Botones de cierre de modal
+  document.querySelectorAll(".close-modal").forEach((button) => {
+    button.addEventListener("click", () => {
+      const modal = button.closest(".project-modal")
+      closeProjectModal(modal)
+    })
+  })
+
+  // Cerrar modal al hacer clic fuera del contenido
+  document.querySelectorAll(".project-modal").forEach((modal) => {
+    modal.addEventListener("click", (e) => {
+      if (e.target === modal) {
+        closeProjectModal(modal)
+      }
+    })
+  })
+
+  // Cerrar modal con tecla Escape
+  document.addEventListener("keydown", (e) => {
+    if (e.key === "Escape") {
+      document.querySelectorAll(".project-modal.active").forEach((modal) => {
+        closeProjectModal(modal)
+      })
+    }
+  })
+
+  // Configurar carruseles para cada modal
+  function setupCarousel(projectId) {
+    const modal = document.getElementById(`projectModal${projectId}`)
+    if (!modal) return
+
+    const thumbnails = modal.querySelectorAll(".carousel-thumbnail")
+    const mainImage = document.getElementById(`mainImage${projectId}`)
+    const captionTitle = document.getElementById(`captionTitle${projectId}`)
+    const captionDesc = document.getElementById(`captionDesc${projectId}`)
+    const prevBtn = modal.querySelector(".carousel-prev")
+    const nextBtn = modal.querySelector(".carousel-next")
+
+    let currentIndex = 0
+
+    // Función para actualizar la imagen principal
+    function updateMainImage(index) {
+      if (!thumbnails[index]) return
+
+      const thumbnail = thumbnails[index]
+      const imgSrc = thumbnail.getAttribute("data-image")
+      const imgTitle = thumbnail.getAttribute("data-title")
+      const imgDesc = thumbnail.getAttribute("data-desc")
+
+      console.log(`Actualizando imagen ${index} en modal ${projectId}:`, imgSrc)
+
+      if (mainImage) {
+        mainImage.src = imgSrc
+        // Manejar errores de carga de imagen
+        mainImage.onerror = () => {
+          console.error(`Error al cargar la imagen en modal ${projectId}:`, imgSrc)
+          mainImage.src = "img/placeholder.jpg" // Imagen de respaldo
+        }
+      }
+
+      if (captionTitle) captionTitle.textContent = imgTitle
+      if (captionDesc) captionDesc.textContent = imgDesc
+
+      // Actualizar miniaturas activas
+      thumbnails.forEach((thumb, i) => {
+        thumb.classList.toggle("active", i === index)
+      })
+
+      currentIndex = index
+    }
+
+    // Evento para las miniaturas
+    thumbnails.forEach((thumbnail, index) => {
+      thumbnail.addEventListener("click", () => {
+        console.log(`Clic en miniatura ${index} del modal ${projectId}`)
+        updateMainImage(index)
+      })
+    })
+
+    // Botones de navegación
+    if (prevBtn) {
+      prevBtn.addEventListener("click", () => {
+        const newIndex = (currentIndex - 1 + thumbnails.length) % thumbnails.length
+        updateMainImage(newIndex)
+      })
+    }
+
+    if (nextBtn) {
+      nextBtn.addEventListener("click", () => {
+        const newIndex = (currentIndex + 1) % thumbnails.length
+        updateMainImage(newIndex)
+      })
+    }
+
+    // Inicializar con la primera imagen
+    updateMainImage(0)
+  }
+
+  // Inicializar todos los carruseles al cargar la página
+  for (let i = 1; i <= 8; i++) {
+    setupCarousel(i)
+  }
 })
+
+// Método 4: Asegurarse de que el preloader se oculte incluso si hay problemas
+window.onload = hidePreloader
