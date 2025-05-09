@@ -539,7 +539,163 @@ ul {
   }
 }
 
-/* Services Section */
+.social-media {
+  background-color: #f8f9fa;
+  padding: 60px 0;
+}
+
+.tiktok-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  align-items: center;
+  background-color: white;
+  border-radius: var(--border-radius-lg);
+  box-shadow: var(--shadow-md);
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.tiktok-container:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-lg);
+}
+
+.tiktok-wrapper {
+  padding: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.tiktok-wrapper::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 100%;
+  width: 1px;
+  background: linear-gradient(to bottom, transparent, var(--color-border), transparent);
+}
+
+.tiktok-embed {
+  max-width: 100%;
+  border-radius: var(--border-radius);
+  transition: transform 0.3s ease;
+}
+
+.tiktok-info {
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.tiktok-info h3 {
+  font-size: 28px;
+  margin-bottom: 20px;
+  color: var(--color-text);
+  position: relative;
+  display: inline-block;
+}
+
+.tiktok-info h3::after {
+  content: "";
+  position: absolute;
+  bottom: -10px;
+  left: 0;
+  width: 60px;
+  height: 3px;
+  background-color: var(--color-primary);
+}
+
+.tiktok-info p {
+  color: var(--color-text-light);
+  margin-bottom: 30px;
+  font-size: 16px;
+  line-height: 1.8;
+}
+
+.tiktok-stats {
+  display: flex;
+  gap: 30px;
+  margin-bottom: 30px;
+}
+
+.stat-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.stat-number {
+  font-size: 24px;
+  font-weight: 700;
+  color: var(--color-primary);
+}
+
+.stat-label {
+  font-size: 14px;
+  color: var(--color-text-light);
+}
+
+.tiktok-cta {
+  margin-top: 10px;
+}
+
+.tiktok-cta .btn-primary {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.tiktok-cta .btn-primary svg {
+  width: 20px;
+  height: 20px;
+}
+
+/* Estilos responsivos para la sección de TikTok */
+@media (max-width: 992px) {
+  .tiktok-container {
+    grid-template-columns: 1fr;
+  }
+
+  .tiktok-wrapper::after {
+    display: none;
+  }
+
+  .tiktok-wrapper {
+    padding: 30px 30px 0 30px;
+  }
+
+  .tiktok-info {
+    padding: 20px 30px 30px 30px;
+    text-align: center;
+  }
+
+  .tiktok-info h3::after {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .tiktok-stats {
+    justify-content: center;
+  }
+}
+
+@media (max-width: 768px) {
+  .social-media {
+    padding: 40px 0;
+  }
+
+  .tiktok-stats {
+    flex-direction: column;
+    gap: 15px;
+    align-items: center;
+  }
+}
+
 .services-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr); /* Cambiar a tres columnas */
@@ -755,267 +911,266 @@ ul {
   text-decoration: none;
 }
 
-   /* Estilos para el modal del carrusel */
-   .project-modal {
-    display: none;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.5);
-    z-index: 1000;
-    justify-content: center;
-    align-items: center;
-    opacity: 0;
-    transition: opacity 0.3s ease;
-  }
+/* Estilos para el modal del carrusel */
+.project-modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 1000;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
 
-  .project-modal.active {
-    display: flex;
-    opacity: 1;
-  }
+.project-modal.active {
+  display: flex;
+  opacity: 1;
+}
 
-  .modal-content {
-    background-color: white;
-    border-radius: 8px;
-    width: 90%;
-    max-width: 900px;
-    max-height: 90vh;
-    overflow: hidden;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
-    position: relative;
-    transform: translateY(20px);
-    transition: transform 0.3s ease;
-  }
+.modal-content {
+  background-color: white;
+  border-radius: 8px;
+  width: 90%;
+  max-width: 900px;
+  max-height: 90vh;
+  overflow: hidden;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+  position: relative;
+  transform: translateY(20px);
+  transition: transform 0.3s ease;
+}
 
-  .project-modal.active .modal-content {
-    transform: translateY(0);
-  }
+.project-modal.active .modal-content {
+  transform: translateY(0);
+}
 
-  .modal-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 15px 20px;
-    border-bottom: 1px solid #e0e0e0;
-  }
+.modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 20px;
+  border-bottom: 1px solid #e0e0e0;
+}
 
-  .modal-header h3 {
-    margin: 0;
-    font-size: 20px;
-    color: #333;
-  }
+.modal-header h3 {
+  margin: 0;
+  font-size: 20px;
+  color: #333;
+}
 
-  .close-modal {
-    background: none;
-    border: none;
-    font-size: 24px;
-    cursor: pointer;
-    color: #666;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 32px;
-    height: 32px;
-    border-radius: 50%;
-    transition: all 0.2s ease;
-  }
+.close-modal {
+  background: none;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+  color: #666;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  transition: all 0.2s ease;
+}
 
-  .close-modal:hover {
-    background-color: rgba(0, 0, 0, 0.05);
-    color: #333;
-  }
+.close-modal:hover {
+  background-color: rgba(0, 0, 0, 0.05);
+  color: #333;
+}
 
-  .modal-body {
-    padding: 20px;
-    overflow-y: auto;
-    max-height: calc(90vh - 70px); /* Header height + padding */
-  }
+.modal-body {
+  padding: 20px;
+  overflow-y: auto;
+  max-height: calc(90vh - 70px); /* Header height + padding */
+}
 
-  /* Nuevo diseño para el carrusel */
-  .carousel-container {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 20px;
-  }
+/* Nuevo diseño para el carrusel */
+.carousel-container {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+}
 
-  .carousel-main-image {
-    position: relative;
-    width: 100%;
-    height: 400px;
-    border-radius: 8px;
-    overflow: hidden;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-  }
+.carousel-main-image {
+  position: relative;
+  width: 100%;
+  height: 400px;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
 
-  .carousel-main-image img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    transition: transform 0.5s ease;
-  }
+.carousel-main-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
 
-  .carousel-caption {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    background: linear-gradient(to top, rgba(0,0,0,0.7), transparent);
-    color: white;
-    padding: 20px;
-  }
+.carousel-caption {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.7), transparent);
+  color: white;
+  padding: 20px;
+}
 
-  .carousel-caption h4 {
-    margin: 0 0 5px 0;
-    font-size: 18px;
-  }
+.carousel-caption h4 {
+  margin: 0 0 5px 0;
+  font-size: 18px;
+}
 
-  .carousel-caption p {
-    margin: 0;
-    font-size: 14px;
-    opacity: 0.9;
-  }
+.carousel-caption p {
+  margin: 0;
+  font-size: 14px;
+  opacity: 0.9;
+}
 
-  .carousel-info-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 20px;
-  }
+.carousel-info-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
 
-  .carousel-description {
-    background-color: #f9f9f9;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
-  }
+.carousel-description {
+  background-color: #f9f9f9;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
 
-  .carousel-description h4 {
-    font-size: 18px;
-    margin-top: 0;
-    margin-bottom: 15px;
-    color: #333;
-    border-bottom: 2px solid;
-    padding-bottom: 8px;
-    display: inline-block;
-  }
+.carousel-description h4 {
+  font-size: 18px;
+  margin-top: 0;
+  margin-bottom: 15px;
+  color: #333;
+  border-bottom: 2px solid;
+  padding-bottom: 8px;
+  display: inline-block;
+}
 
-  .carousel-description p {
-    color: #555;
-    line-height: 1.6;
-    margin: 0;
-  }
+.carousel-description p {
+  color: #555;
+  line-height: 1.6;
+  margin: 0;
+}
 
-  .carousel-meta {
-    background-color: #f0f4f8;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
-  }
+.carousel-meta {
+  background-color: #f0f4f8;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
 
-  .carousel-meta h4 {
-    font-size: 18px;
-    margin-top: 0;
-    margin-bottom: 15px;
-    color: #333;
-    border-bottom: 2px solid var(--color-primary);
-    padding-bottom: 8px;
-    display: inline-block;
-  }
+.carousel-meta h4 {
+  font-size: 18px;
+  margin-top: 0;
+  margin-bottom: 15px;
+  color: #333;
+  border-bottom: 2px solid var(--color-primary);
+  padding-bottom: 8px;
+  display: inline-block;
+}
 
-  .meta-list {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-  }
+.meta-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
 
-  .meta-list li {
-    display: flex;
-    margin-bottom: 12px;
-    font-size: 14px;
-    color: #555;
-  }
+.meta-list li {
+  display: flex;
+  margin-bottom: 12px;
+  font-size: 14px;
+  color: #555;
+}
 
-  .meta-list li:last-child {
-    margin-bottom: 0;
-  }
+.meta-list li:last-child {
+  margin-bottom: 0;
+}
 
-  .meta-list strong {
-    min-width: 100px;
-    color: #333;
-    font-weight: 600;
-  }
+.meta-list strong {
+  min-width: 100px;
+  color: #333;
+  font-weight: 600;
+}
 
-  /* Nuevo diseño para las miniaturas */
-  .carousel-thumbnails {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
-    gap: 10px;
-    margin-top: 20px;
-  }
+/* Nuevo diseño para las miniaturas */
+.carousel-thumbnails {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+  gap: 10px;
+  margin-top: 20px;
+}
 
-  .carousel-thumbnail {
-    height: 70px;
-    border-radius: 6px;
-    overflow: hidden;
-    cursor: pointer;
-    opacity: 0.7;
-    transition: all 0.3s ease;
-    border: 2px solid transparent;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-  }
+.carousel-thumbnail {
+  height: 70px;
+  border-radius: 6px;
+  overflow: hidden;
+  cursor: pointer;
+  opacity: 0.7;
+  transition: all 0.3s ease;
+  border: 2px solid transparent;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
 
-  .carousel-thumbnail img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-  }
+.carousel-thumbnail img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
 
-  .carousel-thumbnail.active {
-    opacity: 1;
-    border-color: var(--color-primary);
-    transform: scale(1.05);
-  }
+.carousel-thumbnail.active {
+  opacity: 1;
+  border-color: var(--color-primary);
+  transform: scale(1.05);
+}
 
-  .carousel-controls {
-    position: absolute;
-    top: 50%;
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    transform: translateY(-50%);
-    z-index: 10;
-    padding: 0 15px;
-    pointer-events: none;
-  }
+.carousel-controls {
+  position: absolute;
+  top: 50%;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  transform: translateY(-50%);
+  z-index: 10;
+  padding: 0 15px;
+  pointer-events: none;
+}
 
-  .carousel-arrow {
-    width: 40px;
-    height: 40px;
-    background-color: white;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    cursor: pointer;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
-    transition: all 0.3s ease;
-    pointer-events: auto;
-  }
+.carousel-arrow {
+  width: 40px;
+  height: 40px;
+  background-color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease;
+  pointer-events: auto;
+}
 
-  .carousel-arrow:hover {
-    background-color: var(--color-primary);
-    color: white;
-  }
+.carousel-arrow:hover {
+  background-color: var(--color-primary);
+  color: white;
+}
 
-  .carousel-prev {
-    left: 15px;
-  }
+.carousel-prev {
+  left: 15px;
+}
 
-  .carousel-next {
-    right: 15px;
-  }
-
+.carousel-next {
+  right: 15px;
+}
 
 .view-more-container {
   text-align: center;
@@ -1359,6 +1514,20 @@ ul {
     object-fit: cover;
   }
 
+  .tiktok-container {
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  .tiktok-wrapper,
+  .tiktok-info {
+    width: 100%;
+  }
+
+  .tiktok-info {
+    text-align: center;
+  }
+
   /* Servicios - Layout mejorado */
   .services-grid {
     grid-template-columns: repeat(2, 1fr);
@@ -1386,7 +1555,6 @@ ul {
     object-fit: cover;
   }
 
-  /* Estilo de tarjeta flotante para imágenes */
   .service-detail-image {
     position: relative;
     box-shadow: var(--shadow-lg);
@@ -1609,6 +1777,9 @@ ul {
     transform: translateY(-50%) rotate(180deg);
   }
 
+  .tiktok-embed {
+    width: 100%;
+  }
   .projects-grid,
   .projects-page-grid {
     grid-template-columns: 1fr;
