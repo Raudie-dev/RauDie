@@ -469,7 +469,7 @@ ul {
 /* Notification styles */
 .notification {
   position: fixed;
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   right: 90px;
   bottom: 100px;
   background-color: white;
@@ -528,6 +528,7 @@ ul {
   color: var(--gray-color);
   line-height: 1.4;
 }
+
 
 .social-media {
   background-color: #f8f9fa;
@@ -1974,165 +1975,4 @@ ul {
 }
 .mt-5 {
   margin-top: 3rem;
-}
-
-/* Link Card Styles from the second CSS file */
-/* Background pattern */
-.background-pattern {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-image: linear-gradient(var(--color-background-light) 1px, transparent 1px),
-    linear-gradient(90deg, var(--color-background-light) 1px, transparent 1px);
-  background-size: 20px 20px;
-  opacity: 0.4;
-  z-index: -1;
-}
-
-/* Link Cards */
-.links-container {
-  display: flex;
-  flex-direction: column;
-  gap: 16px;
-}
-
-.link-card {
-  display: flex;
-  align-items: center;
-  padding: 16px 22px;
-  background-color: var(--color-background);
-  border-radius: var(--border-radius);
-  text-decoration: none;
-  color: var(--color-text);
-  font-family: var(--font-nav);
-  font-weight: 500;
-  transition: var(--transition);
-  border: 1px solid var(--color-border);
-  box-shadow: var(--shadow-sm);
-  position: relative;
-  overflow: hidden;
-  animation: fadeIn 0.5s ease-out forwards;
-  opacity: 0;
-}
-
-.link-card::after {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: linear-gradient(to right, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0));
-  transform: translateX(-100%);
-  transition: transform 0.6s ease;
-}
-
-.link-card:hover {
-  transform: translateY(-3px);
-  box-shadow: var(--shadow-md);
-  border-color: var(--color-primary-light);
-}
-
-.link-card:hover::after {
-  transform: translateX(100%);
-}
-
-.icon-container {
-  position: relative;
-  margin-right: 18px;
-}
-
-.icon {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 42px;
-  height: 42px;
-  border-radius: var(--border-radius-full);
-  color: white;
-  transition: var(--transition);
-}
-
-.link-card:hover .icon {
-  transform: scale(1.1);
-}
-
-.link-text {
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-}
-
-.link-title {
-  font-size: 16px;
-  font-weight: 600;
-  margin-bottom: 2px;
-  transition: var(--transition);
-}
-
-.link-subtitle {
-  font-size: 13px;
-  color: var(--color-text-light);
-  font-weight: 400;
-}
-
-.link-card:hover .link-title {
-  transform: translateX(3px);
-  display: inline-block;
-}
-
-.arrow {
-  opacity: 0;
-  transform: translateX(-10px);
-  transition: var(--transition);
-  color: var(--color-text-light);
-}
-
-.link-card:hover .arrow {
-  opacity: 1;
-  transform: translateX(0);
-}
-
-/* Social media icons */
-.website .icon {
-  background-color: var(--color-primary);
-}
-
-.instagram .icon {
-  background-color: var(--color-primary-light);
-}
-
-.tiktok .icon {
-  background-color: var(--color-text);
-}
-
-.whatsapp .icon {
-  background-color: var(--color-primary-dark);
-}
-
-.linkedin .icon {
-  background-color: var(--color-primary);
-}
-
-/* Apply staggered animation to links */
-.link-card:nth-child(1) {
-  animation-delay: 0.1s;
-}
-
-.link-card:nth-child(2) {
-  animation-delay: 0.2s;
-}
-
-.link-card:nth-child(3) {
-  animation-delay: 0.3s;
-}
-
-.link-card:nth-child(4) {
-  animation-delay: 0.4s;
-}
-
-.link-card:nth-child(5) {
-  animation-delay: 0.5s;
 }
