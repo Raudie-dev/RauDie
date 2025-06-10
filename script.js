@@ -1,29 +1,16 @@
 /**
- * RauDie Landing Page JavaScript - Versión Optimizada y Corregida
- * Incluye menú móvil, scroll to top, animaciones, filtrado de proyectos y modales corregidos
+ * RauDie Landing Page JavaScript - Versión Optimizada
+ * Mejoras de rendimiento y funcionalidad
  */
 
 document.addEventListener("DOMContentLoaded", () => {
   // =============================================
-  // FUNCIONES UTILITARIAS
+  // FUNCIONES UTILITARIAS OPTIMIZADAS
   // =============================================
 
-  // Oculta el preloader
-  function hidePreloader() {
-    const preloader = document.getElementById("preloader")
-    if (preloader) {
-      preloader.style.opacity = "0"
-      setTimeout(() => {
-        preloader.style.display = "none"
-      }, 500)
-    }
-  }
-
-  // Debounce para mejorar rendimiento en scroll/resize
   function debounce(func, wait = 20, immediate = false) {
     let timeout
-    return function () {
-      const args = arguments
+    return function (...args) {
       const later = () => {
         timeout = null
         if (!immediate) func.apply(this, args)
@@ -35,67 +22,63 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   }
 
+  // Cache de elementos DOM para mejor rendimiento
+  const elements = {
+    mobileToggle: document.querySelector(".mobile-toggle"),
+    navMenu: document.querySelector(".nav-menu"),
+    scrollTop: document.getElementById("scroll-top"),
+    filterBtns: document.querySelectorAll(".filter-btn"),
+    projects: document.querySelectorAll(".project-card"),
+    whatsappBtn: document.querySelector(".whatsapp-btn"),
+    contactForm: document.querySelector(".contact-form"),
+  }
+
   // =============================================
-  // PRELOADER
+  // MENÚ MÓVIL OPTIMIZADO
   // =============================================
 
-  // Múltiples métodos para asegurar que el preloader se oculte
-  setTimeout(hidePreloader, 1500)
-  window.addEventListener("load", hidePreloader)
-  if (document.readyState === "complete") hidePreloader()
-  window.onload = hidePreloader
-
-  // =============================================
-  // MENÚ MÓVIL
-  // =============================================
-
-  const mobileToggle = document.querySelector(".mobile-toggle")
-  const navMenu = document.querySelector(".nav-menu")
-  const body = document.body
-
-  if (mobileToggle && navMenu) {
-    // Crear overlay si no existe
+  if (elements.mobileToggle && elements.navMenu) {
     let menuOverlay = document.querySelector(".menu-overlay")
     if (!menuOverlay) {
       menuOverlay = document.createElement("div")
       menuOverlay.className = "menu-overlay"
-      body.appendChild(menuOverlay)
+      document.body.appendChild(menuOverlay)
     }
 
-    // Toggle del menú
     function toggleMenu(e) {
-      if (e) e.preventDefault()
-      navMenu.classList.toggle("active")
-      mobileToggle.classList.toggle("active")
+      e?.preventDefault()
+      const isActive = elements.navMenu.classList.contains("active")
+
+      elements.navMenu.classList.toggle("active")
+      elements.mobileToggle.classList.toggle("active")
       menuOverlay.classList.toggle("active")
-      body.style.overflow = navMenu.classList.contains("active") ? "hidden" : ""
+      document.body.style.overflow = isActive ? "" : "hidden"
     }
 
-    // Cerrar menú
     function closeMenu() {
-      navMenu.classList.remove("active")
-      mobileToggle.classList.remove("active")
+      elements.navMenu.classList.remove("active")
+      elements.mobileToggle.classList.remove("active")
       menuOverlay.classList.remove("active")
-      body.style.overflow = ""
+      document.body.style.overflow = ""
     }
 
-    // Event listeners
-    mobileToggle.addEventListener("click", toggleMenu)
+    elements.mobileToggle.addEventListener("click", toggleMenu)
     menuOverlay.addEventListener("click", closeMenu)
 
-    // Submenús móviles
+    // Submenús móviles optimizados
     document.querySelectorAll(".has-submenu > a").forEach((item) => {
       item.addEventListener("click", function (e) {
         if (window.innerWidth <= 768) {
           e.preventDefault()
-          this.parentElement.classList.toggle("active")
+          const parent = this.parentElement
+          const wasActive = parent.classList.contains("active")
 
           // Cerrar otros submenús
-          document.querySelectorAll(".has-submenu").forEach((other) => {
-            if (other !== this.parentElement) {
-              other.classList.remove("active")
-            }
+          document.querySelectorAll(".has-submenu.active").forEach((other) => {
+            if (other !== parent) other.classList.remove("active")
           })
+
+          parent.classList.toggle("active", !wasActive)
         }
       })
     })
@@ -107,537 +90,314 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   // =============================================
-  // SCROLL TO TOP BUTTON
+  // SCROLL TO TOP OPTIMIZADO
   // =============================================
 
-  const scrollTop = document.getElementById("scroll-top")
-  if (scrollTop) {
-    function toggleScrollButton() {
-      if (window.scrollY > 100) {
-        scrollTop.classList.add("active")
-      } else {
-        scrollTop.classList.remove("active")
-      }
-    }
+  if (elements.scrollTop) {
+    const toggleScrollButton = debounce(() => {
+      elements.scrollTop.classList.toggle("active", window.scrollY > 100)
+    }, 100)
 
-    // Configurar posición fija
-    scrollTop.style.position = "fixed"
-    scrollTop.style.right = "30px"
-    scrollTop.style.bottom = "30px"
-    scrollTop.style.zIndex = "99"
+    window.addEventListener("scroll", toggleScrollButton, { passive: true })
+    toggleScrollButton()
 
-    window.addEventListener("scroll", debounce(toggleScrollButton))
-    toggleScrollButton() // Estado inicial
-
-    scrollTop.addEventListener("click", (e) => {
+    elements.scrollTop.addEventListener("click", (e) => {
       e.preventDefault()
-      window.scrollTo({
-        top: 0,
-        behavior: "smooth",
-      })
+      window.scrollTo({ top: 0, behavior: "smooth" })
     })
   }
 
   // =============================================
-  // RESALTAR ENLACES DE NAVEGACIÓN AL SCROLL
+  // FILTRADO DE PROYECTOS OPTIMIZADO
   // =============================================
 
-  function highlightNavLinks() {
-    const sections = document.querySelectorAll("section[id]")
-    const scrollY = window.pageYOffset
-
-    sections.forEach((section) => {
-      const sectionHeight = section.offsetHeight
-      const sectionTop = section.offsetTop - 100
-      const sectionId = section.getAttribute("id")
-      const navLink = document.querySelector(`.nav-menu a[href*="${sectionId}"]`)
-
-      if (navLink) {
-        const isActive = scrollY > sectionTop && scrollY <= sectionTop + sectionHeight
-        navLink.classList.toggle("active", isActive)
-      }
-    })
-  }
-
-  window.addEventListener("scroll", debounce(highlightNavLinks))
-  highlightNavLinks() // Estado inicial
-
-  // =============================================
-  // ANIMACIONES AL SCROLL
-  // =============================================
-
-  function animateOnScroll() {
-    const elements = document.querySelectorAll(
-      ".service-card, .info-item, .contact-form, .founder-card, " +
-        ".project-card, .resume-card, .skills-box, .contact-item, .highlight-item",
-    )
-
-    elements.forEach((element) => {
-      const elementPosition = element.getBoundingClientRect().top
-      const windowHeight = window.innerHeight
-
-      if (elementPosition < windowHeight - 100) {
-        element.classList.add("animate", "fade-in")
-      }
-    })
-  }
-
-  window.addEventListener("scroll", debounce(animateOnScroll))
-  window.addEventListener("load", animateOnScroll)
-  animateOnScroll() // Estado inicial
-
-  // =============================================
-  // VALIDACIÓN DE FORMULARIO
-  // =============================================
-
-  const form = document.querySelector(".form")
-  if (form) {
-    function validateEmail(email) {
-      return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)
-    }
-
-    form.addEventListener("submit", (e) => {
-      e.preventDefault()
-      let valid = true
-
-      form.querySelectorAll("input, textarea, select").forEach((input) => {
-        const isRequired = input.hasAttribute("required")
-        const isEmpty = !input.value.trim()
-        const isEmailInvalid = input.type === "email" && input.value.trim() && !validateEmail(input.value.trim())
-
-        if ((isRequired && isEmpty) || isEmailInvalid) {
-          valid = false
-          input.classList.add("error")
-        } else {
-          input.classList.remove("error")
-        }
-      })
-
-      if (valid) {
-        const submitBtn = form.querySelector('button[type="submit"]')
-        const originalText = submitBtn.textContent
-
-        submitBtn.disabled = true
-        submitBtn.textContent = "Enviando..."
-
-        setTimeout(() => {
-          alert("¡Mensaje enviado con éxito! Te contactaremos pronto.")
-          form.reset()
-          submitBtn.disabled = false
-          submitBtn.textContent = originalText
-        }, 1500)
-      }
-    })
-
-    // Eliminar error al escribir
-    form.querySelectorAll("input, textarea, select").forEach((input) => {
-      input.addEventListener("input", function () {
-        if (this.value.trim()) this.classList.remove("error")
-      })
-    })
-  }
-
-  // =============================================
-  // SCROLL SUAVE PARA ENLACES
-  // =============================================
-
-  document.querySelectorAll('a[href^="#"]:not([href="#"])').forEach((anchor) => {
-    anchor.addEventListener("click", function (e) {
-      // Ignorar para submenús en móvil
-      if (this.parentElement.classList.contains("has-submenu") && window.innerWidth <= 768) return
-
-      e.preventDefault()
-      const target = document.querySelector(this.getAttribute("href"))
-
-      if (target) {
-        const headerHeight = document.querySelector(".header")?.offsetHeight || 0
-        const targetPosition = target.offsetTop - headerHeight
-
-        window.scrollTo({
-          top: targetPosition,
-          behavior: "smooth",
-        })
-      }
-    })
-  })
-
-  // =============================================
-  // FILTRADO DE PROYECTOS
-  // =============================================
-
-  const filterBtns = document.querySelectorAll(".filter-btn")
-  const projects = document.querySelectorAll(".project-card, .project-item")
-
-  if (filterBtns.length && projects.length) {
+  if (elements.filterBtns.length && elements.projects.length) {
     function filterProjects(filter) {
-      projects.forEach((project) => {
-        const categories = project.dataset.category?.split(" ") || [project.getAttribute("data-category")]
+      const fragment = document.createDocumentFragment()
 
+      elements.projects.forEach((project) => {
+        const categories = project.dataset.category?.split(" ") || []
         const shouldShow = filter === "all" || categories.includes(filter)
-        project.style.display = shouldShow ? "block" : "none"
 
         if (shouldShow) {
-          setTimeout(() => project.classList.add("fade-in"), 100)
+          project.style.display = "block"
+          project.classList.add("visible")
         } else {
-          project.classList.remove("fade-in")
+          project.classList.remove("visible")
+          project.style.display = "none"
         }
       })
     }
 
-    filterBtns.forEach((btn) => {
+    elements.filterBtns.forEach((btn) => {
       btn.addEventListener("click", function () {
-        filterBtns.forEach((b) => b.classList.remove("active"))
+        // Remover clase active de todos los botones
+        elements.filterBtns.forEach((b) => b.classList.remove("active"))
         this.classList.add("active")
-        filterProjects(this.dataset.filter || this.getAttribute("data-filter"))
+        filterProjects(this.dataset.filter)
       })
     })
 
-    // Inicializar mostrando todos
+    // Inicializar con todos los proyectos visibles
     filterProjects("all")
   }
 
   // =============================================
-  // MODALES DE PROYECTOS - VERSIÓN CORREGIDA
+  // MODALES OPTIMIZADOS CON LAZY LOADING
   // =============================================
 
-  function setupProjectModals() {
-    console.log("Inicializando modales de proyectos...")
+  function setupOptimizedModals() {
+    const modals = new Map()
 
-    // Función para configurar el carrusel de un modal específico
-    function setupCarousel(modal) {
-      if (!modal) {
-        console.warn("Modal no encontrado para configurar carrusel")
-        return
+    function createModal(modalId) {
+      if (modals.has(modalId)) return modals.get(modalId)
+
+      const modal = document.querySelector(modalId)
+      if (!modal) return null
+
+      const modalData = {
+        element: modal,
+        thumbnails: modal.querySelectorAll(".thumbnail"),
+        mainImage: modal.querySelector(".gallery-main img"),
+        prevBtn: modal.querySelector(".prev-btn"),
+        nextBtn: modal.querySelector(".next-btn"),
+        currentSlide: modal.querySelector(".current-slide"),
+        totalSlides: modal.querySelector(".total-slides"),
+        currentIndex: 0,
       }
 
-      const thumbnails = modal.querySelectorAll(".carousel-thumbnail")
-      const modalId = modal.id
-      const projectId = modalId.replace("projectModal", "")
-
-      const mainImage = modal.querySelector(`#mainImage${projectId}`) || modal.querySelector(".carousel-main-image img")
-      const captionTitle =
-        modal.querySelector(`#captionTitle${projectId}`) || modal.querySelector(".carousel-caption h4")
-      const captionDesc = modal.querySelector(`#captionDesc${projectId}`) || modal.querySelector(".carousel-caption p")
-      const prevBtn = modal.querySelector(".carousel-prev")
-      const nextBtn = modal.querySelector(".carousel-next")
-
-      let currentIndex = 0
-
-      console.log(`Configurando carrusel para modal ${modalId}:`, {
-        thumbnails: thumbnails.length,
-        mainImage: !!mainImage,
-        captionTitle: !!captionTitle,
-        captionDesc: !!captionDesc,
-      })
-
-      function updateMainImage(index) {
-        if (!thumbnails[index]) {
-          console.warn(`Thumbnail ${index} no encontrado`)
-          return
-        }
-
-        const thumbnail = thumbnails[index]
-        const imageUrl = thumbnail.dataset.image || thumbnail.querySelector("img")?.src
-        const title = thumbnail.dataset.title || ""
-        const desc = thumbnail.dataset.desc || ""
-
-        if (mainImage && imageUrl) {
-          mainImage.src = imageUrl
-          mainImage.onerror = () => {
-            console.warn(`Error cargando imagen: ${imageUrl}`)
-            mainImage.src = "img/placeholder.jpg"
-          }
-        }
-
-        if (captionTitle) captionTitle.textContent = title
-        if (captionDesc) captionDesc.textContent = desc
-
-        // Actualizar clases activas
-        thumbnails.forEach((thumb, i) => {
-          thumb.classList.toggle("active", i === index)
-        })
-
-        currentIndex = index
-        console.log(`Imagen actualizada a índice ${index}: ${title}`)
-      }
-
-      // Event listeners para miniaturas
-      thumbnails.forEach((thumb, index) => {
-        thumb.addEventListener("click", (e) => {
-          e.preventDefault()
-          console.log(`Click en thumbnail ${index}`)
-          updateMainImage(index)
-        })
-      })
-
-      // Botones anterior/siguiente
-      if (prevBtn) {
-        prevBtn.addEventListener("click", (e) => {
-          e.preventDefault()
-          const newIndex = (currentIndex - 1 + thumbnails.length) % thumbnails.length
-          console.log(`Navegación anterior: ${currentIndex} -> ${newIndex}`)
-          updateMainImage(newIndex)
-        })
-      }
-
-      if (nextBtn) {
-        nextBtn.addEventListener("click", (e) => {
-          e.preventDefault()
-          const newIndex = (currentIndex + 1) % thumbnails.length
-          console.log(`Navegación siguiente: ${currentIndex} -> ${newIndex}`)
-          updateMainImage(newIndex)
-        })
-      }
-
-      // Inicializar con primera imagen
-      if (thumbnails.length > 0) {
-        updateMainImage(0)
-      }
+      modals.set(modalId, modalData)
+      return modalData
     }
 
-    // Función para abrir modal
     function openModal(modalId) {
-      console.log(`Intentando abrir modal: ${modalId}`)
+      const modalData = createModal(modalId)
+      if (!modalData) return
 
-      // Buscar el modal por diferentes métodos
-      let modal = document.querySelector(modalId)
-      if (!modal && !modalId.startsWith("#")) {
-        modal = document.querySelector(`#${modalId}`)
-      }
-
-      if (modal) {
-        console.log(`Modal encontrado: ${modalId}`)
-        modal.classList.add("active", "show")
-        document.body.style.overflow = "hidden"
-
-        // Configurar carrusel después de abrir
-        setTimeout(() => setupCarousel(modal), 100)
-      } else {
-        console.error(`Modal no encontrado: ${modalId}`)
-      }
+      modalData.element.classList.add("active")
+      document.body.style.overflow = "hidden"
+      setupModalGallery(modalData)
     }
 
-    // Función para cerrar modal
     function closeModal(modal) {
       if (modal) {
-        console.log(`Cerrando modal: ${modal.id}`)
-        modal.classList.remove("active", "show")
+        modal.classList.remove("active")
         document.body.style.overflow = ""
       }
     }
 
-    // Event listeners para abrir modales
-    document.querySelectorAll(".view-details, .view-project").forEach((btn) => {
-      btn.addEventListener("click", function (e) {
-        e.preventDefault()
+    function setupModalGallery(modalData) {
+      const { thumbnails, mainImage, prevBtn, nextBtn, currentSlide, totalSlides } = modalData
 
-        // Obtener ID del modal de diferentes formas
-        let modalId = null
+      if (totalSlides) totalSlides.textContent = thumbnails.length
 
-        if (this.dataset.project) {
-          modalId = `#projectModal${this.dataset.project}`
-        } else if (this.getAttribute("href")) {
-          modalId = this.getAttribute("href")
-        } else if (this.getAttribute("data-target")) {
-          modalId = this.getAttribute("data-target")
+      function updateImage(index) {
+        if (!thumbnails[index] || !mainImage) return
+
+        const thumbnail = thumbnails[index]
+        const imageUrl = thumbnail.dataset.image
+
+        if (imageUrl && imageUrl !== mainImage.src) {
+          // Lazy loading de imágenes
+          const img = new Image()
+          img.onload = () => {
+            mainImage.src = imageUrl
+          }
+          img.src = imageUrl
         }
 
-        console.log(`Botón clickeado. Modal ID: ${modalId}`)
+        thumbnails.forEach((thumb, i) => {
+          thumb.classList.toggle("active", i === index)
+        })
 
-        if (modalId) {
-          openModal(modalId)
-        } else {
-          console.error("No se pudo determinar el ID del modal", this)
-        }
+        if (currentSlide) currentSlide.textContent = index + 1
+        modalData.currentIndex = index
+      }
+
+      // Event listeners optimizados
+      thumbnails.forEach((thumb, index) => {
+        thumb.addEventListener("click", () => updateImage(index))
       })
-    })
 
-    // Event listeners para cerrar modales
-    document.querySelectorAll(".close-modal").forEach((btn) => {
-      btn.addEventListener("click", function (e) {
+      if (prevBtn) {
+        prevBtn.addEventListener("click", () => {
+          const newIndex = (modalData.currentIndex - 1 + thumbnails.length) % thumbnails.length
+          updateImage(newIndex)
+        })
+      }
+
+      if (nextBtn) {
+        nextBtn.addEventListener("click", () => {
+          const newIndex = (modalData.currentIndex + 1) % thumbnails.length
+          updateImage(newIndex)
+        })
+      }
+
+      // Inicializar con la primera imagen
+      if (thumbnails.length > 0) updateImage(0)
+    }
+
+    // Event delegation para mejor rendimiento
+    document.addEventListener("click", (e) => {
+      if (e.target.matches(".view-details") || e.target.closest(".view-details")) {
         e.preventDefault()
-        const modal = this.closest(".project-modal")
+        const btn = e.target.matches(".view-details") ? e.target : e.target.closest(".view-details")
+        const modalId = `#projectModal${btn.dataset.project}`
+        openModal(modalId)
+      }
+
+      if (e.target.matches(".modal-close") || e.target.closest(".modal-close")) {
+        e.preventDefault()
+        const modal = e.target.closest(".modern-modal")
         closeModal(modal)
-      })
-    })
+      }
 
-    // Cerrar al hacer clic fuera del contenido del modal
-    document.querySelectorAll(".project-modal").forEach((modal) => {
-      modal.addEventListener("click", function (e) {
-        if (e.target === this) {
-          closeModal(this)
-        }
-      })
+      if (e.target.matches(".modal-backdrop")) {
+        const modal = e.target.closest(".modern-modal")
+        closeModal(modal)
+      }
     })
 
     // Cerrar con tecla Escape
     document.addEventListener("keydown", (e) => {
       if (e.key === "Escape") {
-        document.querySelectorAll(".project-modal.active").forEach((modal) => {
-          closeModal(modal)
-        })
+        document.querySelectorAll(".modern-modal.active").forEach(closeModal)
       }
     })
-
-    console.log("Configuración de modales completada")
   }
 
-  // Inicializar modales después de que el DOM esté listo
-  setupProjectModals()
+  setupOptimizedModals()
 
   // =============================================
-  // BOTÓN FLOTANTE DE WHATSAPP
+  // WHATSAPP OPTIMIZADO
   // =============================================
 
-  const whatsappBtn = document.querySelector(".whatsapp-btn")
-  if (whatsappBtn) {
-    const notification = document.createElement("div")
-    notification.className = "notification whatsapp-notification"
-    notification.innerHTML = `
-      <div class="notification-header">
-        <i class="fab fa-whatsapp notification-icon"></i>
-        <div class="notification-title">WhatsApp</div>
-      </div>
-      <div class="notification-message">Envíanos un mensaje por WhatsApp para atención inmediata</div>
-    `
-    document.body.appendChild(notification)
+  if (elements.whatsappBtn) {
+    let notification = document.querySelector(".whatsapp-notification")
+    if (!notification) {
+      notification = document.createElement("div")
+      notification.className = "whatsapp-notification"
+      notification.innerHTML = `
+        <div class="notification-header">
+          <i class="fab fa-whatsapp notification-icon"></i>
+          <div class="notification-title">WhatsApp</div>
+        </div>
+        <div class="notification-message">¡Envíanos un mensaje para atención inmediata!</div>
+      `
+      document.body.appendChild(notification)
+    }
 
     let notificationTimeout
 
-    function showNotification() {
+    const showNotification = () => {
       clearTimeout(notificationTimeout)
       notification.classList.add("show")
     }
 
-    function hideNotification() {
+    const hideNotification = () => {
       notificationTimeout = setTimeout(() => {
         notification.classList.remove("show")
       }, 500)
     }
 
-    // Event listeners
-    whatsappBtn.addEventListener("mouseenter", showNotification)
-    whatsappBtn.addEventListener("mouseleave", hideNotification)
+    elements.whatsappBtn.addEventListener("mouseenter", showNotification)
+    elements.whatsappBtn.addEventListener("mouseleave", hideNotification)
     notification.addEventListener("mouseenter", showNotification)
     notification.addEventListener("mouseleave", hideNotification)
 
-    whatsappBtn.addEventListener("click", (e) => {
-      if (window.innerWidth <= 768) {
-        e.preventDefault()
-        showNotification()
-        setTimeout(() => {
-          notification.classList.remove("show")
-          window.location.href = whatsappBtn.href
-        }, 2000)
-      } else {
-        showNotification()
-        setTimeout(hideNotification, 3000)
-      }
-    })
-
-    // Mostrar brevemente al cargar la página
+    // Mostrar notificación inicial
     setTimeout(() => {
       showNotification()
-      setTimeout(hideNotification, 2000)
-    }, 1500)
+      setTimeout(hideNotification, 3000)
+    }, 2000)
   }
 
   // =============================================
-  // AJUSTES DE DISEÑO PARA MÓVIL
+  // SCROLL SUAVE OPTIMIZADO
   // =============================================
 
-  function adjustHeroLayout() {
-    const heroContent = document.querySelector(".hero-content")
-    if (heroContent) {
-      heroContent.classList.toggle("mobile-layout", window.innerWidth <= 992)
+  document.addEventListener("click", (e) => {
+    const anchor = e.target.closest('a[href^="#"]:not([href="#"])')
+    if (!anchor) return
+
+    if (anchor.parentElement.classList.contains("has-submenu") && window.innerWidth <= 768) return
+
+    e.preventDefault()
+    const target = document.querySelector(anchor.getAttribute("href"))
+
+    if (target) {
+      const headerHeight = document.querySelector(".header")?.offsetHeight || 0
+      const targetPosition = target.offsetTop - headerHeight
+
+      window.scrollTo({
+        top: targetPosition,
+        behavior: "smooth",
+      })
     }
-  }
-
-  window.addEventListener("resize", debounce(adjustHeroLayout))
-  adjustHeroLayout() // Estado inicial
+  })
 
   // =============================================
-  // AÑO ACTUAL EN EL FOOTER
+  // FORMULARIO OPTIMIZADO
   // =============================================
 
-  const yearElement = document.getElementById("currentYear")
-  if (yearElement) {
-    yearElement.textContent = new Date().getFullYear()
+  if (elements.contactForm) {
+    elements.contactForm.addEventListener("submit", async (e) => {
+      e.preventDefault()
+
+      const submitBtn = elements.contactForm.querySelector('button[type="submit"]')
+      const originalText = submitBtn.innerHTML
+
+      submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Enviando...'
+      submitBtn.disabled = true
+
+      try {
+        // Simular envío (aquí irían las validaciones reales)
+        await new Promise((resolve) => setTimeout(resolve, 1500))
+
+        submitBtn.innerHTML = '<i class="fas fa-check"></i> ¡Enviado!'
+        submitBtn.style.background = "#10b981"
+
+        setTimeout(() => {
+          submitBtn.innerHTML = originalText
+          submitBtn.disabled = false
+          submitBtn.style.background = ""
+          elements.contactForm.reset()
+        }, 2000)
+      } catch (error) {
+        submitBtn.innerHTML = '<i class="fas fa-exclamation-triangle"></i> Error'
+        submitBtn.style.background = "#ef4444"
+
+        setTimeout(() => {
+          submitBtn.innerHTML = originalText
+          submitBtn.disabled = false
+          submitBtn.style.background = ""
+        }, 2000)
+      }
+    })
   }
+
+  // =============================================
+  // ANIMACIONES DE SCROLL OPTIMIZADAS
+  // =============================================
+
+  const observerOptions = {
+    threshold: 0.1,
+    rootMargin: "0px 0px -50px 0px",
+  }
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("visible")
+        observer.unobserve(entry.target) // Dejar de observar una vez visible
+      }
+    })
+  }, observerOptions)
+
+  // Observar elementos que necesitan animación
+  document.querySelectorAll(".project-card, .service-card").forEach((el) => {
+    observer.observe(el)
+  })
+
+  console.log("RauDie Website - Optimización completada ✅")
 })
-
-// =============================================
-// CODIGO DE ENLACES DE RAUDIE
-// =============================================
-// Enhanced hover effects for links
-document.querySelectorAll('.link-card').forEach(card => {
-  // Add hover effect
-  card.addEventListener('mouseenter', () => {
-    card.style.transform = 'translateY(-3px)';
-  });
-  
-  card.addEventListener('mouseleave', () => {
-    card.style.transform = 'translateY(0)';
-  });
-  
-  // Add click animation
-  card.addEventListener('click', function() {
-    this.style.transform = 'scale(0.98)';
-    setTimeout(() => {
-      this.style.transform = 'scale(1)';
-    }, 100);
-  });
-});
-
-// Add subtle parallax effect to background
-document.addEventListener('mousemove', (e) => {
-  const moveX = (e.clientX / window.innerWidth) * 5;
-  const moveY = (e.clientY / window.innerHeight) * 5;
-  
-  document.querySelector('.background-pattern').style.transform = 
-    `translate(${moveX}px, ${moveY}px)`;
-});
-
-// Add dynamic year to footer
-document.addEventListener('DOMContentLoaded', () => {
-  const yearElement = document.querySelector('footer p');
-  const currentYear = new Date().getFullYear();
-  yearElement.innerHTML = yearElement.innerHTML.replace('2024', currentYear);
-  
-  // Add subtle animation to logo
-  const logo = document.querySelector('.logo');
-  logo.addEventListener('mouseenter', () => {
-    logo.style.transform = 'translateY(-3px) rotate(5deg)';
-  });
-  
-  logo.addEventListener('mouseleave', () => {
-    logo.style.transform = 'translateY(0) rotate(0)';
-  });
-  
-  // Add subtle animation to header line
-  const headerLine = document.querySelector('.header-line');
-  setTimeout(() => {
-    headerLine.style.width = '60px';
-    headerLine.style.transition = 'width 0.5s ease';
-  }, 1000);
-  
-  // Enhance link subtitles on hover
-  document.querySelectorAll('.link-card').forEach(card => {
-    card.addEventListener('mouseenter', () => {
-      const subtitle = card.querySelector('.link-subtitle');
-      if (subtitle) {
-        subtitle.style.color = 'var(--color-primary-light)';
-      }
-    });
-    
-    card.addEventListener('mouseleave', () => {
-      const subtitle = card.querySelector('.link-subtitle');
-      if (subtitle) {
-        subtitle.style.color = 'var(--color-text-light)';
-      }
-    });
-  });
-});
-
-// Add smooth scroll behavior
-document.documentElement.style.scrollBehavior = 'smooth'; 

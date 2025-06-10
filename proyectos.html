@@ -10,7 +10,7 @@
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <link
     href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Poppins:wght@400;500;600;700&family=Raleway:wght@400;500;600;700;800&display=swap"
     rel="stylesheet">
@@ -36,7 +36,7 @@
             <li><a href="index.html">Inicio</a></li>
             <li><a href="index.html/#about">Quienes Somos</a></li>
             <li class="has-submenu">
-              <a href="#services" >Servicios</a>
+              <a href="#services">Servicios</a>
               <ul class="submenu">
                 <li><a href="servicios/enlaces.html">Enlaces Personalizada</a></li>
                 <li><a href="servicios/landing-basica.html">Landing Básica</a></li>
@@ -46,7 +46,7 @@
                 <li><a href="servicios/seo.html">Optimización SEO</a></li>
               </ul>
             </li>
-            <li><a href="proyectos.html"class="active">Proyecto</a></li>
+            <li><a href="proyectos.html" class="active">Proyecto</a></li>
             <li><a href="#contact">Contactos</a></li>
           </ul>
         </nav>
@@ -61,176 +61,346 @@
 
   <main>
     <!-- Projects Page Header -->
-    <section class="service-detail">
+    <section class="projects-hero">
       <div class="container">
-        <div class="service-header">
+        <div class="projects-hero-content">
+          <div class="projects-badge">
+            <i class="fas fa-rocket"></i>
+            <span>Portafolio</span>
+          </div>
           <h1>Nuestros Proyectos</h1>
-          <p>Descubre algunos de los proyectos más destacados que hemos desarrollado para nuestros clientes</p>
+          <p>Descubre algunos de los proyectos más destacados que hemos desarrollado para nuestros clientes, cada uno
+            con su propia historia de éxito</p>
         </div>
       </div>
+      <div class="projects-hero-bg"></div>
     </section>
 
     <!-- Projects Filter and Grid -->
     <section class="projects section">
       <div class="container">
         <div class="projects-filter">
-          <button class="filter-btn active" data-filter="all">Todos</button>
-          <button class="filter-btn" data-filter="web">Sitios Web</button>
-          <button class="filter-btn" data-filter="ecommerce">E-commerce</button>
-          <button class="filter-btn" data-filter="design">Diseño</button>
+          <button class="filter-btn active" data-filter="all">
+            <i class="fas fa-th"></i>
+            <span>Todos</span>
+          </button>
+          <button class="filter-btn" data-filter="landing">
+            <i class="fas fa-globe"></i>
+            <span>Landing Page</span>
+          </button>
+          <button class="filter-btn" data-filter="ecommerce">
+            <i class="fas fa-shopping-cart"></i>
+            <span>E-commerce</span>
+          </button>
+          <button class="filter-btn" data-filter="dashboard">
+            <i class="fas fa-chart-line"></i>
+            <span>Dashboard</span>
+          </button>
         </div>
 
-        <div class="projects-page-grid">
+        <div class="projects-grid">
           <!-- Proyecto 1 -->
           <div class="project-card" data-category="ecommerce web">
             <div class="project-image">
               <img src="img/proyectos/proyecto-1.png" alt="E-commerce Panaderia Aroma y Sabor">
+              <div class="project-overlay">
+                <div class="project-actions">
+                  <button class="action-btn view-details" data-project="1">
+                    <i class="fas fa-eye"></i>
+                    <span class="action-text">
+                      Ver detalles
+                    </span>
+                  </button>
+                </div>
+              </div>
             </div>
             <div class="project-content">
-              <h3>E-commerce | Panaderia Aroma y Sabor</h3>
-              <p>
-                Desarrollo de tienda online completa de una Panaderia, con su seccion de productos, menú y orden de pedidos.
-              </p>
+              <div class="project-category">E-commerce</div>
+              <h3>Panaderia Aroma y Sabor</h3>
+              <p>Desarrollo de tienda online completa de una Panaderia, con su seccion de productos, menú y orden de
+                pedidos.</p>
               <div class="project-tags">
                 <span>HTML</span>
                 <span>JavaScript</span>
                 <span>Python</span>
               </div>
-              <a href="#" class="btn-text view-details" data-project="1">Ver detalles</a>
+              <div class="project-footer">
+                <div class="project-date">
+                  <i class="fas fa-calendar"></i>
+                  <span>Oct 2024</span>
+                </div>
+                <button class="btn-details view-details" data-project="1">
+                  Ver detalles
+                  <i class="fas fa-arrow-right"></i>
+                </button>
+              </div>
             </div>
           </div>
 
           <!-- Proyecto 2 -->
-          <div class="project-card" data-category="web">
+          <div class="project-card" data-category="dashboard">
             <div class="project-image">
               <img src="img/proyectos/proyecto-2.png" alt="Dashboard Administrativo">
+              <div class="project-overlay">
+                <div class="project-actions">
+                  <button class="action-btn view-details" data-project="2">
+                    <i class="fas fa-eye"></i>
+                    <span class="action-text">
+                      Ver detalles
+                    </span>
+                  </button>
+                </div>
+              </div>
             </div>
             <div class="project-content">
-              <h3>Dashboard Administrativo | CEIP Mi Mundo Infantil</h3>
-              <p>
-                Panel de control para gestión de los estudiantes, eventos academicos y administracion de los profesores. 
-              </p>
+              <div class="project-category">Dashboard</div>
+              <h3>CEIP Mi Mundo Infantil</h3>
+              <p>Panel de control para gestión de los estudiantes, eventos academicos y administracion de los
+                profesores.</p>
               <div class="project-tags">
                 <span>HTML</span>
                 <span>Python</span>
                 <span>Django</span>
                 <span>SQLite3</span>
               </div>
-              <a href="#" class="btn-text view-details" data-project="2">Ver detalles</a>
+              <div class="project-footer">
+                <div class="project-date">
+                  <i class="fas fa-calendar"></i>
+                  <span>Ene 2025</span>
+                </div>
+                <button class="btn-details view-details" data-project="2">
+                  Ver detalles
+                  <i class="fas fa-arrow-right"></i>
+                </button>
+              </div>
             </div>
           </div>
 
           <!-- Proyecto 3 -->
-          <div class="project-card" data-category="web">
+          <div class="project-card" data-category="landing">
             <div class="project-image">
               <img src="img/proyectos/proyecto-3.png" alt="Portal Educativo">
+              <div class="project-overlay">
+                <div class="project-actions">
+                  <button class="action-btn view-details" data-project="3">
+                    <i class="fas fa-eye"></i>
+                    <span class="action-text">
+                      Ver detalles
+                    </span>
+                  </button>
+                </div>
+              </div>
             </div>
             <div class="project-content">
-              <h3>Landing Page | Mi Mundo Infantil</h3>
-              <p>
-                Página informativa diseñada para una institución de educación inicial, destacando su misión, visión y servicios educativos.
-              </p>
+              <div class="project-category">Landing Page</div>
+              <h3>Mi Mundo Infantil</h3>
+              <p>Página informativa diseñada para una institución de educación inicial, destacando su misión, visión y
+                servicios educativos.</p>
               <div class="project-tags">
                 <span>HTML</span>
                 <span>CSS</span>
                 <span>Bootstrap</span>
               </div>
-              <a href="#" class="btn-text view-details" data-project="3">Ver detalles</a>
+              <div class="project-footer">
+                <div class="project-date">
+                  <i class="fas fa-calendar"></i>
+                  <span>Ene 2025</span>
+                </div>
+                <button class="btn-details view-details" data-project="3">
+                  Ver detalles
+                  <i class="fas fa-arrow-right"></i>
+                </button>
+              </div>
             </div>
           </div>
 
           <!-- Proyecto 4 -->
-          <div class="project-card" data-category="design web">
+          <div class="project-card" data-category="landing">
             <div class="project-image">
               <img src="img/proyectos/proyecto-4.png" alt="Sitio Web de Carreras">
+              <div class="project-overlay">
+                <div class="project-actions">
+                  <button class="action-btn view-details" data-project="4">
+                    <i class="fas fa-eye"></i>
+                    <span class="action-text">
+                      Ver detalles
+                    </span>
+                  </button>
+                </div>
+              </div>
             </div>
             <div class="project-content">
-              <h3>Página de Noticias de Carreras | 724Speed</h3>
-              <p>
-                Diseño y desarrollo de un sitio web dinámico enfocado en noticias de carreras en México, destacando la Fórmula 1 y el NASCAR México City.
-              </p>
+              <div class="project-category">Noticias</div>
+              <h3>724Speed</h3>
+              <p>Diseño y desarrollo de un sitio web dinámico enfocado en noticias de carreras en México, destacando la
+                Fórmula 1 y el NASCAR México City.</p>
               <div class="project-tags">
                 <span>WordPress</span>
                 <span>PHP</span>
               </div>
-              <a href="#" class="btn-text view-details" data-project="4">Ver detalles</a>
+              <div class="project-footer">
+                <div class="project-date">
+                  <i class="fas fa-calendar"></i>
+                  <span>Sep 2024</span>
+                </div>
+                <button class="btn-details view-details" data-project="4">
+                  Ver detalles
+                  <i class="fas fa-arrow-right"></i>
+                </button>
+              </div>
             </div>
           </div>
 
           <!-- Proyecto 5 -->
-          <div class="project-card" data-category="ecommerce">
+          <div class="project-card" data-category="landing">
             <div class="project-image">
               <img src="img/proyectos/proyecto-5.png" alt="Agencia de Servicios Migratorios">
+              <div class="project-overlay">
+                <div class="project-actions">
+                  <button class="action-btn view-details" data-project="5">
+                    <i class="fas fa-eye"></i>
+                    <span class="action-text">
+                      Ver detalles
+                    </span>
+                  </button>
+                </div>
+              </div>
             </div>
             <div class="project-content">
-              <h3>Landing Page | Agencia de Servicios Migratorios</h3>
-              <p>
-                Diseño y desarrollo de una landing page profesional para una agencia de servicios migratorios, destacando sus servicios y testimonios.
-              </p>
+              <div class="project-category">Landing Page</div>
+              <h3>Agencia de Servicios Migratorios</h3>
+              <p>Diseño y desarrollo de una landing page profesional para una agencia de servicios migratorios,
+                destacando sus servicios y testimonios.</p>
               <div class="project-tags">
                 <span>HTML</span>
                 <span>CSS</span>
                 <span>JavaScript</span>
                 <span>Bootstrap</span>
               </div>
-              <a href="#" class="btn-text view-details" data-project="5">Ver detalles</a>
+              <div class="project-footer">
+                <div class="project-date">
+                  <i class="fas fa-calendar"></i>
+                  <span>Dic 2024</span>
+                </div>
+                <button class="btn-details view-details" data-project="5">
+                  Ver detalles
+                  <i class="fas fa-arrow-right"></i>
+                </button>
+              </div>
             </div>
           </div>
 
           <!-- Proyecto 6 -->
-          <div class="project-card" data-category="web">
+          <div class="project-card" data-category="landing">
             <div class="project-image">
               <img src="img/proyectos/proyecto-6.png" alt="Sitio Web de Carreras">
+              <div class="project-overlay">
+                <div class="project-actions">
+                  <button class="action-btn view-details" data-project="6">
+                    <i class="fas fa-eye"></i>
+                    <span class="action-text">
+                      Ver detalles
+                    </span>
+                  </button>
+                </div>
+              </div>
             </div>
             <div class="project-content">
-              <h3>Sitio Web Institucional | Dirección de Investigación UBA</h3>
-              <p>
-                Página informativa diseñada para la Dirección de Investigación de la Universidad Bicentenaria de Aragua.
-              </p>
+              <div class="project-category">Institucional</div>
+              <h3>Dirección de Investigación UBA</h3>
+              <p>Página informativa diseñada para la Dirección de Investigación de la Universidad Bicentenaria de
+                Aragua.</p>
               <div class="project-tags">
                 <span>PHP</span>
                 <span>Bootstrap</span>
                 <span>JavaScript</span>
               </div>
-              <a href="#" class="btn-text view-details" data-project="6">Ver detalles</a>
+              <div class="project-footer">
+                <div class="project-date">
+                  <i class="fas fa-calendar"></i>
+                  <span>Abr 2025</span>
+                </div>
+                <button class="btn-details view-details" data-project="6">
+                  Ver detalles
+                  <i class="fas fa-arrow-right"></i>
+                </button>
+              </div>
             </div>
           </div>
 
           <!-- Proyecto 7 -->
-          <div class="project-card" data-category="web">
+          <div class="project-card" data-category="dashboard">
             <div class="project-image">
               <img src="img/proyectos/proyecto-7.png" alt="Dashboard de Gestión de Eventos">
+              <div class="project-overlay">
+                <div class="project-actions">
+                  <button class="action-btn view-details" data-project="7">
+                    <i class="fas fa-eye"></i>
+                    <span class="action-text">
+                      Ver detalles
+                    </span>
+                  </button>
+                </div>
+              </div>
             </div>
             <div class="project-content">
+              <div class="project-category">Dashboard</div>
               <h3>Dashboard de Gestión de Eventos</h3>
-              <p>
-                Panel administrativo para gestionar eventos y galerías multimedia, con funciones de agregar, editar y eliminar contenido.
-              </p>
+              <p>Panel administrativo para gestionar eventos y galerías multimedia, con funciones de agregar, editar y
+                eliminar contenido.</p>
               <div class="project-tags">
                 <span>PHP</span>
                 <span>SQL</span>
                 <span>JavaScript</span>
               </div>
-              <a href="#" class="btn-text view-details" data-project="7">Ver detalles</a>
+              <div class="project-footer">
+                <div class="project-date">
+                  <i class="fas fa-calendar"></i>
+                  <span>Abr 2025</span>
+                </div>
+                <button class="btn-details view-details" data-project="7">
+                  Ver detalles
+                  <i class="fas fa-arrow-right"></i>
+                </button>
+              </div>
             </div>
           </div>
 
           <!-- Proyecto 8 -->
-          <div class="project-card" data-category="web">
+          <div class="project-card" data-category="landing">
             <div class="project-image">
               <img src="img/proyectos/proyecto-8.png" alt="Pagina de Enlaces">
+              <div class="project-overlay">
+                <div class="project-actions">
+                  <button class="action-btn view-details" data-project="8">
+                    <i class="fas fa-eye"></i>
+                    <span class="action-text">
+                      Ver detalles
+                    </span>
+                  </button>
+                </div>
+              </div>
             </div>
             <div class="project-content">
+              <div class="project-category">Enlaces</div>
               <h3>Pagina de Enlaces</h3>
-                <p>
-                Diseño y desarrollo de una página de enlaces, que permite centralizar múltiples enlaces en un solo lugar. Ideal para compartir redes sociales, códigos promocionales, enlaces de suscripción y otros recursos importantes de manera organizada y accesible.
-                </p>
+              <p>Diseño y desarrollo de una página de enlaces, que permite centralizar múltiples enlaces en un solo
+                lugar.</p>
               <div class="project-tags">
                 <span>HTML</span>
                 <span>CSS</span>
                 <span>Bootstrap</span>
               </div>
-              <a href="#" class="btn-text view-details" data-project="8">Ver detalles</a>
+              <div class="project-footer">
+                <div class="project-date">
+                  <i class="fas fa-calendar"></i>
+                  <span>Mar 2025</span>
+                </div>
+                <button class="btn-details view-details" data-project="8">
+                  Ver detalles
+                  <i class="fas fa-arrow-right"></i>
+                </button>
+              </div>
             </div>
           </div>
         </div>
@@ -238,578 +408,900 @@
     </section>
   </main>
 
-  <!-- Modal para detalles del proyecto 1: E-commerce | Panaderia Aroma y Sabor -->
-  <div id="projectModal1" class="project-modal">
-    <div class="modal-content">
+  <!-- Modal Moderno -->
+  <div id="projectModal1" class="modern-modal">
+    <div class="modal-backdrop"></div>
+    <div class="modal-container">
       <div class="modal-header">
-        <h3>E-commerce | Panaderia Aroma y Sabor</h3>
-        <button class="close-modal" aria-label="Cerrar">×</button>
+        <div class="modal-title">
+          <h2>E-commerce | Panaderia Aroma y Sabor</h2>
+          <div class="modal-subtitle">Tienda online completa</div>
+        </div>
+        <button class="modal-close">
+          <i class="fas fa-times"></i>
+        </button>
       </div>
-      <div class="modal-body">
-        <div class="carousel-container">
-          <div class="carousel-main-image">
-            <img id="mainImage1" src="img/modal-proyectos/aroma-header.jpg" alt="E-commerce Panaderia Aroma y Sabor">   
-            <div class="carousel-caption">
-              <h4 id="captionTitle1">E-commerce Panaderia Aroma y Sabor</h4>
-              <p id="captionDesc1">Vista principal de la tienda online con productos destacados</p>
-            </div>
-            <div class="carousel-controls">
-              <button class="carousel-arrow carousel-prev" aria-label="Anterior">
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                  <polyline points="15 18 9 12 15 6"></polyline>
-                </svg>
+
+      <div class="modal-content">
+        <div class="modal-gallery">
+          <div class="gallery-main">
+            <img id="mainImage1" src="img/proyectos/proyecto-1.png" alt="Proyecto principal">
+            <div class="gallery-controls">
+              <button class="gallery-btn prev-btn">
+                <i class="fas fa-chevron-left"></i>
               </button>
-              <button class="carousel-arrow carousel-next" aria-label="Siguiente">
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                  <polyline points="9 18 15 12 9 6"></polyline>
-                </svg>
+              <button class="gallery-btn next-btn">
+                <i class="fas fa-chevron-right"></i>
               </button>
             </div>
-          </div>
-          
-          <div class="carousel-thumbnails">
-            <div class="carousel-thumbnail active" data-image="img/modal-proyectos/aroma-header.jpg" data-title="E-commerce Panaderia Aroma y Sabor" data-desc="Vista principal de la tienda online con productos destacados">
-              <img src="img/modal-proyectos/aroma-header.jpg" alt="Vista principal">
-            </div>
-            <div class="carousel-thumbnail" data-image="img/modal-proyectos/aroma-productos.jpg" data-title="Catálogo de productos" data-desc="Sección que muestra todos los productos detallada que tiene la tienda disponible, con su respectiva descripcion">
-              <img src="img/modal-proyectos/aroma-productos.jpg" alt="Catálogo de productos">
-            </div>
-            <div class="carousel-thumbnail" data-image="img/modal-proyectos/aroma-historia.jpg" data-title="Seccion de la Historia de la Tienda" data-desc="Esta seccion incluye la historia de nuestra tienda junto con imagenes de nuestras instalaciones">
-              <img src="img/modal-proyectos/aroma-historia.jpg" alt="Carrito de compras">
-            </div>
-            <div class="carousel-thumbnail" data-image="img/modal-proyectos/aroma-menujpg.jpg" data-title="Menú" data-desc="Esta seccion permite al cliente ver el menu de la tienda, con sus respectivos precios yh lo que esta disponibe en este momento">
-              <img src="img/modal-proyectos/aroma-menujpg.jpg" alt="Panel de administración">
-            </div>
-            <div class="carousel-thumbnail" data-image="img/modal-proyectos/aroma-contacto.jpg" data-title="Informacion de Contacto" data-desc="Esta seccion se añade la ubicacion de la tienda sus horarios y el contacto con el cliente, numero de telefono y correo electronico">
-              <img src="img/modal-proyectos/aroma-contacto.jpg" alt="Proceso de checkout">
+            <div class="gallery-counter">
+              <span class="current-slide">1</span> / <span class="total-slides">5</span>
             </div>
           </div>
-          
-          <div class="carousel-info-grid">
-            <div class="carousel-description">
-              <h4>Descripción</h4>
-              <p>
-                Desarrollo de una tienda online completa para una panadería artesanal. El sitio incluye catálogo de productos, sistema de carrito de compras, proceso de checkout y panel de administración para gestionar productos, pedidos y clientes. La plataforma permite a los clientes realizar pedidos personalizados y programar entregas.
-              </p>
+
+          <div class="gallery-thumbnails">
+            <div class="thumbnail active" data-image="img/modal-proyectos/aroma-header.jpg">
+              <img src="img/modal-proyectos/aroma-header.jpg" alt="Vista 1">
             </div>
-            <div class="carousel-meta">
-              <h4>Detalles del Proyecto</h4>
-              <ul class="meta-list">
-                <li><strong>Cliente:</strong> <span>Panadería Aroma y Sabor</span></li>
-                <li><strong>Fecha:</strong> <span>Octubre 2024</span></li>
-                <li><strong>Categoría:</strong> <span>E-commerce</span></li>
-                <li><strong>Tecnologías:</strong> <span>HTML, JavaScript, Python</span></li>
+            <div class="thumbnail" data-image="img/modal-proyectos/aroma-productos.jpg">
+              <img src="img/modal-proyectos/aroma-productos.jpg" alt="Vista 2">
+            </div>
+            <div class="thumbnail" data-image="img/modal-proyectos/aroma-productos.jpg">
+              <img src="img/modal-proyectos/aroma-menujpg.jpg" alt="Vista 3">
+            </div>
+            <div class="thumbnail" data-image="img/modal-proyectos/aroma-historia.jpg">
+              <img src="img/modal-proyectos/aroma-historia.jpg" alt="Vista 4">
+            </div>
+            <div class="thumbnail" data-image="img/modal-proyectos/aroma-contacto.jpg">
+              <img src="img/modal-proyectos/aroma-contacto.jpg" alt="Vista 5">
+            </div>
+          </div>
+        </div>
+
+        <div class="modal-info">
+          <div class="project-details">
+            <h3>Descripción del Proyecto</h3>
+            <p>Desarrollo de una tienda online completa para una panadería artesanal. El sitio incluye catálogo de
+              productos, sistema de carrito de compras, proceso de checkout y panel de administración para gestionar
+              productos, pedidos y clientes.</p>
+
+            <div class="project-features">
+              <h4>Características principales:</h4>
+              <ul>
+                <li><i class="fas fa-check"></i> Catálogo de productos interactivo</li>
+                <li><i class="fas fa-check"></i> Sistema de carrito de compras</li>
+                <li><i class="fas fa-check"></i> Proceso de checkout optimizado</li>
+                <li><i class="fas fa-check"></i> Panel de administración</li>
+                <li><i class="fas fa-check"></i> Gestión de pedidos</li>
               </ul>
+            </div>
+          </div>
+
+          <div class="project-meta">
+            <div class="meta-item">
+              <i class="fas fa-user"></i>
+              <div>
+                <span class="meta-label">Cliente</span>
+                <span class="meta-value">Panadería Aroma y Sabor</span>
+              </div>
+            </div>
+
+            <div class="meta-item">
+              <i class="fas fa-calendar"></i>
+              <div>
+                <span class="meta-label">Fecha</span>
+                <span class="meta-value">Octubre 2024</span>
+              </div>
+            </div>
+
+            <div class="meta-item">
+              <i class="fas fa-tag"></i>
+              <div>
+                <span class="meta-label">Categoría</span>
+                <span class="meta-value">E-commerce</span>
+              </div>
+            </div>
+
+            <div class="meta-item">
+              <i class="fas fa-code"></i>
+              <div>
+                <span class="meta-label">Tecnologías</span>
+                <div class="tech-tags">
+                  <span>HTML</span>
+                  <span>JavaScript</span>
+                  <span>Python</span>
+                </div>
+              </div>
             </div>
           </div>
         </div>
       </div>
     </div>
   </div>
-  
-  <!-- Modal para detalles del proyecto 2: Dashboard Administrativo | CEIP Mi Mundo Infantil -->
-  <div id="projectModal2" class="project-modal">
-    <div class="modal-content">
+
+  <!-- Modal para Proyecto 2 -->
+  <div id="projectModal2" class="modern-modal">
+    <div class="modal-backdrop"></div>
+    <div class="modal-container">
       <div class="modal-header">
-        <h3>Dashboard Administrativo | CEIP Mi Mundo Infantil</h3>
-        <button class="close-modal" aria-label="Cerrar">×</button>
+        <div class="modal-title">
+          <h2>Dashboard Administrativo | CEIP Mi Mundo Infantil</h2>
+          <div class="modal-subtitle">Sistema de gestión educativa</div>
+        </div>
+        <button class="modal-close">
+          <i class="fas fa-times"></i>
+        </button>
       </div>
-      <div class="modal-body">
-        <div class="carousel-container">
-          <div class="carousel-main-image">
-            <img id="mainImage2" src="img/modal-proyectos/dashboard-MMI-Listado-Estuduantes.jpg" alt="Dashboard Administrativo">   
-            <div class="carousel-caption">
-              <h4 id="captionTitle2">Dashboard principal</h4>
-              <p id="captionDesc2">Iniciamos en el rol del profesor donde dependiendiendo del aula que le toque, puede ver el listados de estudiantes agregados a su aula</p>
-            </div>
-            <div class="carousel-controls">
-              <button class="carousel-arrow carousel-prev" aria-label="Anterior">
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                  <polyline points="15 18 9 12 15 6"></polyline>
-                </svg>
+
+      <div class="modal-content">
+        <div class="modal-gallery">
+          <div class="gallery-main">
+            <img id="mainImage2" src="img/proyectos/proyecto-2.png" alt="Dashboard principal">
+            <div class="gallery-controls">
+              <button class="gallery-btn prev-btn">
+                <i class="fas fa-chevron-left"></i>
               </button>
-              <button class="carousel-arrow carousel-next" aria-label="Siguiente">
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                  <polyline points="9 18 15 12 9 6"></polyline>
-                </svg>
+              <button class="gallery-btn next-btn">
+                <i class="fas fa-chevron-right"></i>
               </button>
             </div>
-          </div>
-          
-          <div class="carousel-thumbnails">
-            <div class="carousel-thumbnail active" data-image="img/modal-proyectos/dashboard-MMI-Listado-Estuduantes.jpg" data-title="Dashboard principal" data-desc="Iniciamos en el rol del profesor donde dependiendiendo del aula que le toque, puede ver el listados de estudiantes agregados a su aula">
-              <img src="img/modal-proyectos/dashboard-MMI-Listado-Estuduantes.jpg" alt="Dashboard principal">
-            </div>
-            <div class="carousel-thumbnail" data-image="img/modal-proyectos/dashboard-MMI-Gestion-Aulas.jpg" data-title="Gestión de las Aulas" data-desc="En el rol del director podemos ver todas las aulas que tenemos disponibles, y agregar o eliminar aulas y asignarle un profesor y ver el listado de estudiantes que tiene cada aula">
-              <img src="img/modal-proyectos/dashboard-MMI-Gestion-Aulas.jpg" alt="Gestión de estudiantes">
-            </div>
-            <div class="carousel-thumbnail" data-image="img/modal-proyectos/dashboard-MMI-Comentarios-estudiantes.jpg" data-title="Cometarios de profesores" data-desc="En el rol del profesor podemos ver los cometarios que han dejado de sus estudiantes, el cual el director lleva un monitoreo de cada uno de los estudiantes">
-              <img src="img/modal-proyectos/dashboard-MMI-Comentarios-estudiantes.jpg" alt="Calendario de eventos">
-            </div>
-            <div class="carousel-thumbnail" data-image="img/modal-proyectos/dashboard-MMI-configuracion-user.jpg" data-title="Configuracion del usuario" data-desc="Los usuarios pueden cambiar su contraseña y correo electronico para poder tener acceso a la plataforma, y el director puede ver los usuarios que tiene registrados en la plataforma">
-              <img src="img/modal-proyectos/dashboard-MMI-configuracion-user.jpg" alt="Generación de reportes">
+            <div class="gallery-counter">
+              <span class="current-slide">1</span> / <span class="total-slides">4</span>
             </div>
           </div>
-          
-          <div class="carousel-info-grid">
-            <div class="carousel-description">
-              <h4>Descripción</h4>
-              <p>
-                Panel de control completo para la gestión académica de una institución educativa. El sistema permite administrar estudiantes, profesores, eventos académicos, calificaciones y comunicaciones. Incluye generación de reportes, seguimiento de asistencia y módulo de comunicación con padres y representantes.
-              </p>
+
+          <div class="gallery-thumbnails">
+            <div class="thumbnail active" data-image="img/modal-proyectos/dashboard-MMI-Listado-Estuduantes.jpg">
+              <img src="img/modal-proyectos/dashboard-MMI-Listado-Estuduantes.jpg" alt="Dashboard">
             </div>
-            <div class="carousel-meta">
-              <h4>Detalles del Proyecto</h4>
-              <ul class="meta-list">
-                <li><strong>Cliente:</strong> <span>CEIP Mi Mundo Infantil</span></li>
-                <li><strong>Fecha:</strong> <span>Enero 2025</span></li>
-                <li><strong>Categoría:</strong> <span>Aplicación Web</span></li>
-                <li><strong>Tecnologías:</strong> <span>HTML, Python, Django, SQLite3</span></li>
+            <div class="thumbnail" data-image="img/modal-proyectos/dashboard-MMI-Gestion-Profesores.jpg">
+              <img src="img/modal-proyectos/dashboard-MMI-Gestion-Aulas.jpg" alt="Gestión de Aulas">
+            </div>
+            <div class="thumbnail" data-image="img/modal-proyectos/dashboard-MMI-Comentarios-estudiantes.jpg">
+              <img src="img/modal-proyectos/dashboard-MMI-Comentarios-estudiantes.jpg" alt="Comentarios de Estudiantes">
+            </div>
+            <div class="thumbnail" data-image="img/modal-proyectos/dashboard-MMI-configuracion-user.jpg">
+              <img src="img/modal-proyectos/dashboard-MMI-configuracion-user.jpg" alt="Configuración">
+            </div>
+          </div>
+        </div>
+
+        <div class="modal-info">
+          <div class="project-details">
+            <h3>Descripción del Proyecto</h3>
+            <p>Panel de control completo para la gestión académica de una institución educativa. El sistema permite
+              administrar estudiantes, profesores, eventos académicos, calificaciones y comunicaciones.</p>
+
+            <div class="project-features">
+              <h4>Características principales:</h4>
+              <ul>
+                <li><i class="fas fa-check"></i> Gestión de estudiantes</li>
+                <li><i class="fas fa-check"></i> Administración de profesores</li>
+                <li><i class="fas fa-check"></i> Control de eventos académicos</li>
+                <li><i class="fas fa-check"></i> Sistema de calificaciones</li>
+                <li><i class="fas fa-check"></i> Módulo de comunicaciones</li>
               </ul>
+            </div>
+          </div>
+
+          <div class="project-meta">
+            <div class="meta-item">
+              <i class="fas fa-user"></i>
+              <div>
+                <span class="meta-label">Cliente</span>
+                <span class="meta-value">CEIP Mi Mundo Infantil</span>
+              </div>
+            </div>
+
+            <div class="meta-item">
+              <i class="fas fa-calendar"></i>
+              <div>
+                <span class="meta-label">Fecha</span>
+                <span class="meta-value">Enero 2025</span>
+              </div>
+            </div>
+
+            <div class="meta-item">
+              <i class="fas fa-tag"></i>
+              <div>
+                <span class="meta-label">Categoría</span>
+                <span class="meta-value">Aplicación Web</span>
+              </div>
+            </div>
+
+            <div class="meta-item">
+              <i class="fas fa-code"></i>
+              <div>
+                <span class="meta-label">Tecnologías</span>
+                <div class="tech-tags">
+                  <span>HTML</span>
+                  <span>Python</span>
+                  <span>Django</span>
+                  <span>SQLite3</span>
+                </div>
+              </div>
             </div>
           </div>
         </div>
       </div>
     </div>
   </div>
-  
-  <!-- Modal para detalles del proyecto 3: Landing Page | Mi Mundo Infantil -->
-  <div id="projectModal3" class="project-modal">
-    <div class="modal-content">
+
+  <!-- Modal para Proyecto 3 -->
+  <div id="projectModal3" class="modern-modal">
+    <div class="modal-backdrop"></div>
+    <div class="modal-container">
       <div class="modal-header">
-        <h3>Landing Page | Mi Mundo Infantil</h3>
-        <button class="close-modal" aria-label="Cerrar">×</button>
+        <div class="modal-title">
+          <h2>Landing Page | Mi Mundo Infantil</h2>
+          <div class="modal-subtitle">Página institucional educativa</div>
+        </div>
+        <button class="modal-close">
+          <i class="fas fa-times"></i>
+        </button>
       </div>
-      <div class="modal-body">
-        <div class="carousel-container">
-          <div class="carousel-main-image">
-            <img id="mainImage3" src="img/modal-proyectos/MMI-header.jpg" alt="Landing Page Mi Mundo Infantil">   
-            <div class="carousel-caption">
-              <h4 id="captionTitle3">Página principal</h4>
-              <p id="captionDesc3">Diseño atractivo con información clave de la institución</p>
-            </div>
-            <div class="carousel-controls">
-              <button class="carousel-arrow carousel-prev" aria-label="Anterior">
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                  <polyline points="15 18 9 12 15 6"></polyline>
-                </svg>
+
+      <div class="modal-content">
+        <div class="modal-gallery">
+          <div class="gallery-main">
+            <img id="mainImage3" src="img/proyectos/proyecto-3.png" alt="Landing page">
+            <div class="gallery-controls">
+              <button class="gallery-btn prev-btn">
+                <i class="fas fa-chevron-left"></i>
               </button>
-              <button class="carousel-arrow carousel-next" aria-label="Siguiente">
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                  <polyline points="9 18 15 12 9 6"></polyline>
-                </svg>
+              <button class="gallery-btn next-btn">
+                <i class="fas fa-chevron-right"></i>
               </button>
             </div>
-          </div>
-          
-          <div class="carousel-thumbnails">
-            <div class="carousel-thumbnail active" data-image="img/modal-proyectos/MMI-header.jpg" data-title="Encabezado de la Pagina" data-desc="Diseño atractivo con información clave de la institución">
-              <img src="img/modal-proyectos/MMI-header.jpg" alt="Página principal">
-            </div>
-            <div class="carousel-thumbnail" data-image="img/modal-proyectos/MMI-porque-elegirnos.jpg" data-title="Sección ¿Porque Elegirnos?" data-desc="Presentación de qe nos hace difernetes a las demás instituciones">
-              <img src="img/modal-proyectos/MMI-porque-elegirnos.jpg" alt="Sección ¿Porque Elegirnos?">
-            </div>
-            <div class="carousel-thumbnail" data-image="img/modal-proyectos/MMI-programas.jpg" data-title="Servicios educativos" data-desc="Detalle de los programas y metodologías educativas">
-              <img src="img/modal-proyectos/MMI-programas.jpg" alt="Servicios educativos">
-            </div>
-            <div class="carousel-thumbnail" data-image="img/modal-proyectos/MMI-reforzamiento.jpg" data-title="Seccion de Refozamiento Pedagogico" data-desc="Recorrido visual por las áreas de la institución">
-              <img src="img/modal-proyectos/MMI-reforzamiento.jpg" alt="Refozamiento Pedagogico">
-            </div>
-            <div class="carousel-thumbnail" data-image="img/modal-proyectos/MMI-horarios.jpg" data-title="Horarios de la Institución" data-desc="Horarios de atención, actividades de clases y tareas dirigidas">
-              <img src="img/modal-proyectos/MMI-horarios.jpg" alt="Horarios de la Institución">
-            </div>
-            <div class="carousel-thumbnail" data-image="img/modal-proyectos/MMI-Galeria.jpg" data-title="Galería de instalaciones" data-desc="Recorrido visual por las áreas de la institución y las actividades realizadas">
-              <img src="img/modal-proyectos/MMI-Galeria.jpg" alt="Galería de instalaciones">
-            </div>
-            <div class="carousel-thumbnail" data-image="img/modal-proyectos/MMI-contactos.jpg" data-title="Formulario de contacto" data-desc="Sección para solicitar información adicional">
-              <img src="img/modal-proyectos/MMI-contactos.jpg" alt="Formulario de contacto">
+            <div class="gallery-counter">
+              <span class="current-slide">1</span> / <span class="total-slides">4</span>
             </div>
           </div>
-          
-          <div class="carousel-info-grid">
-            <div class="carousel-description">
-              <h4>Descripción</h4>
-              <p>
-                Página informativa diseñada para una institución de educación inicial, destacando su misión, visión y servicios educativos. El sitio incluye secciones de presentación, galería de instalaciones, información sobre metodología educativa, testimonios de padres y formulario de contacto para solicitar información adicional.
-              </p>
+
+          <div class="gallery-thumbnails">
+            <div class="thumbnail active" data-image="img/modal-proyectos/MMI-header.jpg">
+              <img src="img/modal-proyectos/MMI-header.jpg" alt="Encabezado">
             </div>
-            <div class="carousel-meta">
-              <h4>Detalles del Proyecto</h4>
-              <ul class="meta-list">
-                <li><strong>Cliente:</strong> <span>CEIP Mi Mundo Infantil</span></li>
-                <li><strong>Fecha:</strong> <span>Enero 2025</span></li>
-                <li><strong>Categoría:</strong> <span>Sitio Web</span></li>
-                <li><strong>Tecnologías:</strong> <span>HTML, CSS, Bootstrap</span></li>
+            <div class="thumbnail" data-image="img/modal-proyectos/MMI-porque-elegirnos.jpg">
+              <img src="img/modal-proyectos/MMI-porque-elegirnos.jpg" alt="Por qué elegirnos">
+            </div>
+            <div class="thumbnail" data-image="img/modal-proyectos/MMI-programas.jpg">
+              <img src="img/modal-proyectos/MMI-programas.jpg" alt="Programas educativos">
+            </div>
+            <di class="thumbnail" data-image="img/modal-proyectos/MMI-horarios.jpg">
+              <img src="img/modal-proyectos/MMI-horarios.jpg" alt="Horarios">
+            </di>
+            <div class="thumbnail" data-image="img/modal-proyectos/MMI-reforzamiento.jpg">
+              <img src="img/modal-proyectos/MMI-reforzamiento.jpg" alt="Reforzamiento educativo">
+            </div>
+            <div class="thumbnail" data-image="img/modal-proyectos/MMI-Galeria.jpg">
+              <img src="img/modal-proyectos/MMI-Galeria.jpg" alt="Galería">
+            </div>
+            <div class="thumbnail" data-image="img/modal-proyectos/MMI-contactos.jpg">
+              <img src="img/modal-proyectos/MMI-contactos.jpg" alt="Contacto">
+            </div>
+          </div>
+        </div>
+
+        <div class="modal-info">
+          <div class="project-details">
+            <h3>Descripción del Proyecto</h3>
+            <p>Página informativa diseñada para una institución de educación inicial, destacando su misión, visión y
+              servicios educativos. El sitio incluye secciones de presentación, galería de instalaciones, información
+              sobre metodología educativa, testimonios de padres y formulario de contacto.</p>
+
+            <div class="project-features">
+              <h4>Características principales:</h4>
+              <ul>
+                <li><i class="fas fa-check"></i> Diseño responsive</li>
+                <li><i class="fas fa-check"></i> Galería de instalaciones</li>
+                <li><i class="fas fa-check"></i> Información educativa</li>
+                <li><i class="fas fa-check"></i> Formulario de contacto</li>
               </ul>
+            </div>
+          </div>
+
+          <di class="project-meta">
+            <div class="meta-item">
+              <i class="fas fa-user"></i>
+              <div>
+                <span class="meta-label">Cliente</span>
+                <span class="meta-value">CEIP Mi Mundo Infantil</span>
+              </div>
+            </div>
+
+            <div class="meta-item">
+              <i class="fas fa-calendar"></i>
+              <div>
+                <span class="meta-label">Fecha</span>
+                <span class="meta-value">Enero 2025</span>
+              </div>
+            </div>
+
+            <div class="meta-item">
+              <i class="fas fa-tag"></i>
+              <div>
+                <span class="meta-label">Categoría</span>
+                <span class="meta-value">Landing Page</span>
+              </div>
+            </div>
+
+            <div class="meta-item">
+              <i class="fas fa-code"></i>
+              <div>
+                <span class="meta-label">Tecnologías</span>
+                <div class="tech-tags">
+                  <span>HTML</span>
+                  <span>CSS</span>
+                  <span>Bootstrap</span>
+                </div>
+              </div>
+            </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!--Modal de pagina deportiva | 724Speed-->
+  <div id="projectModal4" class="modern-modal">
+    <div class="modal-backdrop"></div>
+    <div class="modal-container">
+      <div class="modal-header">
+        <div class="modal-title">
+          <h2>Página de Noticias de Carreras | 724Speed</h2>
+          <div class="modal-subtitle">Pagina diseñada en WordPress para noticias del mundo del deporte</div>
+        </div>
+        <button class="modal-close">
+          <i class="fas fa-times"></i>
+        </button>
+      </div>
+
+      <div class="modal-content">
+        <div class="modal-gallery">
+          <div class="gallery-main">
+            <img id="mainImage2" src="img/proyectos/proyecto-4.png" alt="724Speed Page">
+            <div class="gallery-controls">
+              <button class="gallery-btn prev-btn">
+                <i class="fas fa-chevron-left"></i>
+              </button>
+              <button class="gallery-btn next-btn">
+                <i class="fas fa-chevron-right"></i>
+              </button>
+            </div>
+            <div class="gallery-counter">
+              <span class="current-slide">1</span> / <span class="total-slides">4</span>
+            </div>
+          </div>
+
+          <div class="gallery-thumbnails">
+            <div class="thumbnail active" data-image="img/modal-proyectos/724speed-header.jpg">
+              <img src="img/modal-proyectos/724speed-header.jpg" alt="724Speed Header">
+            </div>
+            <div class="thumbnail" data-image="img/modal-proyectos/724speed-seccion.jpg">
+              <img src="img/modal-proyectos/724speed-seccion.jpg" alt="724Speed Sección">
+            </div>
+            <div class="thumbnail" data-image="img/modal-proyectos/724speed-seccion2.jpg">
+              <img src="img/modal-proyectos/724speed-seccion2.jpg" alt="724Speed Sección 2">
+            </div>
+            <div class="thumbnail" data-image="img/modal-proyectos/724speed-noticias.jpg">
+              <img src="img/modal-proyectos/724speed-noticias.jpg" alt="724Speed Noticias">
+            </div>
+          </div>
+        </div>
+
+        <div class="modal-info">
+          <div class="project-details">
+            <h3>Descripción del Proyecto</h3>
+            <p>
+              Diseño y desarrollo de un sitio web dinámico enfocado en noticias de carreras en México, destacando la
+              Fórmula 1 y el NASCAR México City. Incluye secciones informativas, galerías multimedia para mejorar la
+              interacción con los usuarios, calendario de eventos y perfiles de pilotos destacados.
+            </p>
+            <div class="project-features">
+              <h4>Características principales:</h4>
+              <ul>
+                <li><i class="fas fa-check"></i> Sección de noticias actualizadas</li>
+                <li><i class="fas fa-check"></i> Galerías multimedia de carreras</li>
+                <li><i class="fas fa-check"></i> Calendario de eventos deportivos</li>
+                <li><i class="fas fa-check"></i> Perfiles de pilotos destacados</li>
+                <li><i class="fas fa-check"></i> Integración con redes sociales</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="project-meta">
+            <div class="meta-item">
+              <i class="fas fa-user"></i>
+              <div>
+                <span class="meta-label">Cliente</span>
+                <span class="meta-value">724Speed</span>
+              </div>
+            </div>
+
+            <div class="meta-item">
+              <i class="fas fa-calendar"></i>
+              <div>
+                <span class="meta-label">Fecha</span>
+                <span class="meta-value">Septiembre 2024</span>
+              </div>
+            </div>
+
+            <div class="meta-item">
+              <i class="fas fa-tag"></i>
+              <div>
+                <span class="meta-label">Categoría</span>
+                <span class="meta-value">Sports</span>
+              </div>
+            </div>
+
+            <div class="meta-item">
+              <i class="fas fa-code"></i>
+              <div>
+                <span class="meta-label">Tecnologías</span>
+                <div class="tech-tags">
+                  <span>PHP</span>
+                  <span>CSS</span>
+                  <span>WordPress</span>
+                </div>
+              </div>
             </div>
           </div>
         </div>
       </div>
     </div>
   </div>
-  
-  <!-- Modal para detalles del proyecto 4: Página de Noticias de Carreras | 724Speed -->
-  <div id="projectModal4" class="project-modal">
-    <div class="modal-content">
+  <!-- Modal para landing Page | Agencia Migratoria -->
+  <div id="projectModal5" class="modern-modal">
+    <div class="modal-backdrop"></div>
+    <div class="modal-container">
       <div class="modal-header">
-        <h3>Página de Noticias de Carreras | 724Speed</h3>
-        <button class="close-modal" aria-label="Cerrar">×</button>
+        <div class="modal-title">
+          <h2>Landing Page | Agencia de Servicios Migratorios</h2>
+          <div class="modal-subtitle">Página profesional para servicios migratorios</div>
+        </div>
+        <button class="modal-close">
+          <i class="fas fa-times"></i>
+        </button>
       </div>
-      <div class="modal-body">
-        <div class="carousel-container">
-          <div class="carousel-main-image">
-            <img id="mainImage4" src="img/modal-proyectos/724speed-header.jpg" alt="Página de Noticias de Carreras">   
-            <div class="carousel-caption">
-              <h4 id="captionTitle4">Página principal</h4>
-              <p id="captionDesc4">Portal de noticias sobre carreras automovilísticas</p>
-            </div>
-            <div class="carousel-controls">
-              <button class="carousel-arrow carousel-prev" aria-label="Anterior">
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                  <polyline points="15 18 9 12 15 6"></polyline>
-                </svg>
+
+      <div class="modal-content">
+        <div class="modal-gallery">
+          <div class="gallery-main">
+            <img id="mainImage5" src="img/modal-proyectos/FFI-header.jpg" alt="Agencia de Servicios Migratorios">
+            <div class="gallery-controls">
+              <button class="gallery-btn prev-btn">
+                <i class="fas fa-chevron-left"></i>
               </button>
-              <button class="carousel-arrow carousel-next" aria-label="Siguiente">
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                  <polyline points="9 18 15 12 9 6"></polyline>
-                </svg>
+              <button class="gallery-btn next-btn">
+                <i class="fas fa-chevron-right"></i>
               </button>
-            </div>S
-          </div>
-          
-          <div class="carousel-thumbnails">
-            <div class="carousel-thumbnail active" data-image="img/modal-proyectos/724speed-header.jpg" data-title="Página principal" data-desc="Portal de noticias sobre carreras automovilísticas">
-              <img src="img/modal-proyectos/724speed-header.jpg" alt="Página principal | Header">
             </div>
-            <div class="carousel-thumbnail" data-image="img/modal-proyectos/724speed-seccion.jpg" data-title="Sección de noticias" data-desc="Artículos recientes sobre eventos de carreras">
-              <img src="img/modal-proyectos/724speed-seccion.jpg" alt="Sección de noticias">
-            </div>
-            <div class="carousel-thumbnail" data-image="img/modal-proyectos/724speed-seccion2.jpg" data-title="Secciones de la Pagina" data-desc="Secciones de la página con las noticias de carreras nacionales e internacionales">
-              <img src="img/modal-proyectos/724speed-seccion2.jpg" alt="Secciones de la Pagina">
-            </div>
-            <div class="carousel-thumbnail" data-image="img/modal-proyectos/724speed-noticias.jpg" data-title="Articulo de Noticias" data-desc="Articulo de noticias de la carrerras">
-              <img src="img/modal-proyectos/724speed-noticias.jpg" alt="Articulo de Noticias">
+            <div class="gallery-counter">
+              <span class="current-slide">1</span> / <span class="total-slides">5</span>
             </div>
           </div>
-          
-          <div class="carousel-info-grid">
-            <div class="carousel-description">
-              <h4>Descripción</h4>
-              <p>
-                Diseño y desarrollo de un sitio web dinámico enfocado en noticias de carreras en México, destacando la Fórmula 1 y el NASCAR México City. Incluye secciones informativas, galerías multimedia para mejorar la interacción con los usuarios, calendario de eventos y perfiles de pilotos destacados.
-              </p>
+
+          <div class="gallery-thumbnails">
+            <div class="thumbnail active" data-image="img/modal-proyectos/FFI-header.jpg">
+              <img src="img/modal-proyectos/FFI-header.jpg" alt="Agencia Header">
             </div>
-            <div class="carousel-meta">
-              <h4>Detalles del Proyecto</h4>
-              <ul class="meta-list">
-                <li><strong>Cliente:</strong> <span>724Speed</span></li>
-                <li><strong>Fecha:</strong> <span>Septiembre 2024</span></li>
-                <li><strong>Categoría:</strong> <span>Sitio Web</span></li>
-                <li><strong>Tecnologías:</strong> <span>WordPress, PHP</span></li>
+            <div class="thumbnail" data-image="img/modal-proyectos/MMI-porque-elegirnos.jpg">
+              <img src="img/modal-proyectos/MMI-porque-elegirnos.jpg" alt="Por qué elegirnos">
+            </div>
+            <div class="thumbnail" data-image="img/modal-proyectos/FFI-servicios.jpg">
+              <img src="img/modal-proyectos/FFI-servicios.jpg" alt="Servicios de la Agencia">
+            </div>
+            <div class="thumbnail" data-image="img/modal-proyectos/FFI-testimonios.jpg">
+              <img src="img/modal-proyectos/FFI-testimonios.jpg" alt="Testimonios de Clientes">
+            </div>
+            <div class="thumbnail" data-image="img/modal-proyectos/FFI-contactos.jpg">
+              <img src="img/modal-proyectos/FFI-contactos.jpg" alt="Formulario de Contacto">
+            </div>
+          </div>
+        </div>
+
+        <div class="modal-info">
+          <div class="project-details">
+            <h3>Descripción del Proyecto</h3>
+            <p>Diseño y desarrollo de una landing page profesional para una agencia de servicios migratorios, destacando
+              sus servicios, testimonios de clientes y un formulario de contacto para consultas.</p>
+            <div class="project-features">
+              <h4>Características principales:</h4>
+              <ul>
+                <li><i class="fas fa-check"></i> Diseño atractivo y profesional</li>
+                <li><i class="fas fa-check"></i> Sección de servicios detallada</li>
+                <li><i class="fas fa-check"></i> Testimonios de clientes</li>
+                <li><i class="fas fa-check"></i> Formulario de contacto</li>
               </ul>
+            </div>
+          </div>
+          <div class="project-meta">
+            <div class="meta-item">
+              <i class="fas fa-user"></i>
+              <div>
+                <span class="meta-label">Cliente</span>
+                <span class="meta-value">Agencia de Servicios Migratorios</span>
+              </div>
+            </div>
+            <div class="meta-item">
+              <i class="fas fa-calendar"></i>
+              <div>
+                <span class="meta-label">Fecha</span>
+                <span class="meta-value">Diciembre 2024</span>
+              </div>
+            </div>
+            <div class="meta-item">
+              <i class="fas fa-tag"></i>
+              <div>
+                <span class="meta-label">Categoría</span>
+                <span class="meta-value">Landing Page</span>
+              </div>
+            </div>
+            <div class="meta-item">
+              <i class="fas fa-code"></i>
+              <div>
+                <span class="meta-label">Tecnologías</span>
+                <div class="tech-tags">
+                  <span>HTML</span>
+                  <span>CSS</span>
+                  <span>JavaScript</span>
+                  <span>Bootstrap</span>
+                </div>
+              </div>
             </div>
           </div>
         </div>
       </div>
     </div>
   </div>
-  
-  <!-- Modal para detalles del proyecto 5: Landing Page | Agencia de Servicios Migratorios -->
-  <div id="projectModal5" class="project-modal">
-    <div class="modal-content">
+
+  <!-- Modal para Direccion de Investigacion UBA -->
+  <div id="projectModal6" class="modern-modal">
+    <div class="modal-backdrop"></div>
+    <div class="modal-container">
       <div class="modal-header">
-        <h3>Landing Page | Agencia de Servicios Migratorios</h3>
-        <button class="close-modal" aria-label="Cerrar">×</button>
-      </div>
-      <div class="modal-body">
-        <div class="carousel-container">
-          <div class="carousel-main-image">
-            <img id="mainImage5" src="img/modal-proyectos/FFI-header.jpg" alt="Landing Page Agencia de Servicios Migratorios">   
-            <div class="carousel-caption">
-              <h4 id="captionTitle5">Página principal</h4>
-              <p id="captionDesc5">Landing page profesional para servicios migratorios</p>
-            </div>
-            <div class="carousel-controls">
-              <button class="carousel-arrow carousel-prev" aria-label="Anterior">
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                  <polyline points="15 18 9 12 15 6"></polyline>
-                </svg>
-              </button>
-              <button class="carousel-arrow carousel-next" aria-label="Siguiente">
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                  <polyline points="9 18 15 12 9 6"></polyline>
-                </svg>
-              </button>
-            </div>
-          </div>
-          
-          <div class="carousel-thumbnails">
-            <div class="carousel-thumbnail active" data-image="img/modal-proyectos/FFI-header.jpg" data-title="Encabezado de la Pagina" data-desc="Landing page profesional para servicios migratorios, junto con un boton estatico que te lleva a su whatsapp">
-              <img src="img/modal-proyectos/FFI-header.jpg" alt="Página principal">
-            </div>
-            <div class="carousel-thumbnail" data-image="img/modal-proyectos/FFI-servicios.jpg" data-title="Servicios Migratorios" data-desc="Descripción de los servicios ofrecidos por la agencia, incluyendo asesoría y gestión de trámites migratorios">
-              <img src="img/modal-proyectos/FFI-servicios.jpg" alt="servicios migratorios">
-            </div>
-            <div class="carousel-thumbnail" data-image="img/modal-proyectos/FFI-asesorias.jpg" data-title="Seccion de Modalidad de Asesoría" data-desc="Esta seccion ayuda a los clientes a elegir la modalidad de asesoría que desean, ya sea presencial o virtual">
-              <img src="img/modal-proyectos/FFI-asesorias.jpg" alt="Asesoría">
-            </div>
-            <div class="carousel-thumbnail" data-image="img/modal-proyectos/FFI-porque-elegirnos.jpg" data-title="Sección de ¿Porque Elegirnos?" data-desc="Esta seccion describe el porque elegir esta agencia de servicios migratorios, y que la hace difernetes a las demás"> 
-              <img src="img/modal-proyectos/FFI-porque-elegirnos.jpg" alt="porque elegirnos">
-            </div>
-            <div class="carousel-thumbnail" data-image="img/modal-proyectos/FFI-testimonios.jpg" data-title="Nuestros testimonios" data-desc="Testimonios de clientes satisfechos con los servicios migratorios ofrecidos por la agencia"> 
-              <img src="img/modal-proyectos/FFI-testimonios.jpg" alt="testimonios">
-            </div>
-            <div class="carousel-thumbnail" data-image="img/modal-proyectos/FFI-contactos.jpg" data-title="Sección de Contacto" data-desc="Formulario de contacto para solicitar información adicional y asesoría personalizada">
-              <img src="img/modal-proyectos/FFI-contactos.jpg" alt="Sección de Contacto">
-            </div>
-          </div>
-          
-          <div class="carousel-info-grid">
-            <div class="carousel-description">
-              <h4>Descripción</h4>
-              <p>
-                Diseño y desarrollo de una landing page profesional para una agencia de servicios migratorios, destacando sus servicios, testimonios de clientes y un formulario de contacto optimizado para captar prospectos de manera efectiva. El sitio incluye secciones informativas sobre los diferentes tipos de visas y trámites migratorios.
-              </p>
-            </div>
-            <div class="carousel-meta">
-              <h4>Detalles del Proyecto</h4>
-              <ul class="meta-list">
-                <li><strong>Cliente:</strong> <span>Agencia de Servicios Migratorios</span></li>
-                <li><strong>Fecha:</strong> <span>Diciembre 2024</span></li>
-                <li><strong>Categoría:</strong> <span>Landing Page</span></li>
-                <li><strong>Tecnologías:</strong> <span>HTML, CSS, JavaScript, Bootstrap</span></li>
-              </ul>
-            </div>
-          </div>
+        <div class="modal-title">
+          <h2>Institucional | Dirección de Investigación UBA</h2>
+          <div class="modal-subtitle">Página informativa para la universidad</div>
         </div>
+        <button class="modal-close">
+          <i class="fas fa-times"></i>
+        </button>
       </div>
-    </div>
-  </div>
-  
-  <!-- Modal para detalles del proyecto 6: Sitio Web Institucional | Dirección de Investigación UBA -->
-  <div id="projectModal6" class="project-modal">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h3>Sitio Web Institucional | Dirección de Investigación UBA</h3>
-        <button class="close-modal" aria-label="Cerrar">×</button>
-      </div>
-      <div class="modal-body">
-        <div class="carousel-container">
-          <div class="carousel-main-image">
-            <img id="mainImage6" src="img/modal-proyectos/diuba-header-principal.jpg" alt="Sitio Web Institucional UBA">   
-            <div class="carousel-caption">
-              <h4 id="captionTitle6">Página principal</h4>
-              <p id="captionDesc6">Portal institucional para la Dirección de Investigación</p>
+
+      <div class="modal-content">
+        <div class="modal-gallery">
+          <div class="gallery-main">
+            <img id="mainImage6" src="img/modal-proyectos/diuba-header-principal.jpg"
+              alt="Dirección de Investigación UBA">
+            <div class="gallery-controls">
+              <button class="gallery-btn prev-btn">
+                <i class="fas fa-chevron-left"></i>
+              </button>
+              <button class="gallery-btn next-btn">
+                <i class="fas fa-chevron-right"></i>
+              </button>
             </div>
-            <div class="carousel-controls">
-              <button class="carousel-arrow carousel-prev" aria-label="Anterior">
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                  <polyline points="15 18 9 12 15 6"></polyline>
-                </svg>
-              </button>
-              <button class="carousel-arrow carousel-next" aria-label="Siguiente">
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                  <polyline points="9 18 15 12 9 6"></polyline>
-                </svg>
-              </button>
+            <div class="gallery-counter">
+              <span class="current-slide">1</span> / <span class="total-slides">17</span>
             </div>
           </div>
-          
-          <div class="carousel-thumbnails">
-            <div class="carousel-thumbnail active" data-image="img/modal-proyectos/diuba-header-principal.jpg" data-title="Página principal" data-desc="Portal institucional para la Dirección de Investigación">
+
+          <div class="gallery-thumbnails">
+            <div class="thumbnail active" data-image="img/modal-proyectos/diuba-header-principal.jpg">
               <img src="img/modal-proyectos/diuba-header-principal.jpg" alt="Página principal">
             </div>
-            <div class="carousel-thumbnail" data-image="img/modal-proyectos/diuba-nosotros-principal.jpg" data-title="Sobre Nosotros" data-desc="Información sobre que el es la dirección de investigación y su misión">
+            <div class="thumbnail" data-image="img/modal-proyectos/diuba-nosotros-principal.jpg">
               <img src="img/modal-proyectos/diuba-nosotros-principal.jpg" alt="Nosotros">
             </div>
-            <div class="carousel-thumbnail" data-image="img/modal-proyectos/diuba-politica-principal.jpg" data-title="Politicas de Investigacion UBA" data-desc="Seccion que muestra las politicas de investigacion de la universidad, como fuee construida y que tiene la direccion de investigacion">
-              <img src="img/modal-proyectos/diuba-politica-principal.jpg" alt="Politicas">
+            <div class="thumbnail" data-image="img/modal-proyectos/diuba-politica-principal.jpg">
+              <img src="img/modal-proyectos/diuba-politica-principal.jpg" alt="Políticas">
             </div>
-            <div class="carousel-thumbnail" data-image="img/modal-proyectos/diuba-objectivos-principal.jpg" data-title="Los Objectivos de la Politica Institucional" data-desc="En esta seccion se muestran los objetivos de las Politicas Institucionales, y que es lo que busca la universidad con esta direccion">
-              <img src="img/modal-proyectos/diuba-objectivos-principal.jpg" alt="Objectivos">
+            <div class="thumbnail" data-image="img/modal-proyectos/diuba-objectivos-principal.jpg">
+              <img src="img/modal-proyectos/diuba-objectivos-principal.jpg" alt="Objetivos">
             </div>
-            <div class="carousel-thumbnail" data-image="img/modal-proyectos/diuba-myv-principal.jpg" data-title="Misión y Visión" data-desc="Sección que describe la misión y visión de la Dirección de Investigación UBA">
+            <div class="thumbnail" data-image="img/modal-proyectos/diuba-myv-principal.jpg">
               <img src="img/modal-proyectos/diuba-myv-principal.jpg" alt="Misión y Visión">
             </div>
-            <div class="carousel-thumbnail" data-image="img/modal-proyectos/diuba-autoridades-principal.jpg" data-title="Autoridades DIEP" data-desc="Sección donde muestra sobre las autoridades de la Dirección de Investigación UBA">
+            <div class="thumbnail" data-image="img/modal-proyectos/diuba-autoridades-principal.jpg">
               <img src="img/modal-proyectos/diuba-autoridades-principal.jpg" alt="Autoridades">
             </div>
-            <div class="carousel-thumbnail" data-image="img/modal-proyectos/diuba-header-eventos.jpg" data-title="Eventos de Investigacion" data-desc="Sección que muestra los eventos de investigacion que tiene la universidad, y los eventos que se han realizado">
-              <img src="img/modal-proyectos/diuba-header-eventos.jpg" alt="Eventos de Investigacion">
+            <div class="thumbnail" data-image="img/modal-proyectos/diuba-header-eventos.jpg">
+              <img src="img/modal-proyectos/diuba-header-eventos.jpg" alt="Eventos de Investigación">
             </div>
-            <div class="carousel-thumbnail" data-image="img/modal-proyectos/diuba-proximos-eventos.jpg" data-title="Proximos Eventos de DIEP" data-desc="Sección que muestra los proximos eventos de investigacion que tiene la universidad, y los eventos que se han realizado">
-              <img src="img/modal-proyectos/diuba-proximos-eventos.jpg" alt="Líneas de investigación">
+            <div class="thumbnail" data-image="img/modal-proyectos/diuba-proximos-eventos.jpg">
+              <img src="img/modal-proyectos/diuba-proximos-eventos.jpg" alt="Próximos Eventos">
             </div>
-            <div class="carousel-thumbnail" data-image="img/modal-proyectos/diuba-jornadas-eventos.jpg" data-title="Enlace de Formulario para inscripciones de Jornada de Investigacion" data-desc="Sección que muestra el formulario de inscripcion para la jornada de investigacion, mediante un enlace de google forms">
-              <img src="img/modal-proyectos/diuba-jornadas-eventos.jpg" alt="Formulario de inscripcion">
+            <div class="thumbnail" data-image="img/modal-proyectos/diuba-jornadas-eventos.jpg">
+              <img src="img/modal-proyectos/diuba-jornadas-eventos.jpg" alt="Formulario de inscripción">
             </div>
-            <div class="carousel-thumbnail" data-image="img/modal-proyectos/diuba-galeria-eventos.jpg" data-title="Galeria de Imagenes de los Eventos realizados" data-desc="Galeria de imagenes de los eventos realizados por la direccion de investigacion, y los eventos que se han realizado">
-              <img src="img/modal-proyectos/diuba-galeria-eventos.jpg" alt="Eventos de Investigacion">
+            <div class="thumbnail" data-image="img/modal-proyectos/diuba-galeria-eventos.jpg">
+              <img src="img/modal-proyectos/diuba-galeria-eventos.jpg" alt="Galería de Eventos">
             </div>
-            <div class="carousel-thumbnail" data-image="img/modal-proyectos/diuba-videos-eventos.jpg" data-title="Videos de los Eventos de Investigacion subidos a Youtube" data-desc="Se muestran videos de los eventos realizados por la direccion de investigacion, y los eventos que se han realizado">
-              <img src="img/modal-proyectos/diuba-videos-eventos.jpg" alt="Líneas de investigación">
+            <div class="thumbnail" data-image="img/modal-proyectos/diuba-videos-eventos.jpg">
+              <img src="img/modal-proyectos/diuba-videos-eventos.jpg" alt="Videos de Eventos">
             </div>
-            <div class="carousel-thumbnail" data-image="img/modal-proyectos/diuba-header-lineas.jpg" data-title="Líneas de investigación" data-desc="Áreas de investigación e infomacion institucional de la universidad">
+            <div class="thumbnail" data-image="img/modal-proyectos/diuba-header-lineas.jpg">
               <img src="img/modal-proyectos/diuba-header-lineas.jpg" alt="Líneas de investigación">
             </div>
-            <div class="carousel-thumbnail" data-image="img/modal-proyectos/diuba-investigacion-lineas.jpg" data-title="Informacion de las lineas de investigacion que trabaja la institucion" data-desc="En esta parte se encuentra la descripcion de las lineas de investigacion, sus tipo, y los objetivos de cada una de ellas">
-              <img src="img/modal-proyectos/diuba-investigacion-lineas.jpg" alt="Líneas de investigación">
+            <div class="thumbnail" data-image="img/modal-proyectos/diuba-investigacion-lineas.jpg">
+              <img src="img/modal-proyectos/diuba-investigacion-lineas.jpg" alt="Información de investigación">
             </div>
-            <div class="carousel-thumbnail" data-image="img/modal-proyectos/diuba-documentos-lineas.jpg" data-title="Documentacion en PDF de las Lineas de investigacion" data-desc="En esta parte se encuentra la documentacion en PDF de las lineas de investigacion">
-              <img src="img/modal-proyectos/diuba-documentos-lineas.jpg" alt="Documentacion de las lineas de investigacion">
+            <div class="thumbnail" data-image="img/modal-proyectos/diuba-documentos-lineas.jpg">
+              <img src="img/modal-proyectos/diuba-documentos-lineas.jpg" alt="Documentación PDF">
             </div>
-            <div class="carousel-thumbnail" data-image="img/modal-proyectos/diuba-header-conctato.jpg" data-title="Contacto" data-desc="Esta seccion del sitio web es para el contacto de la direccion de investigacion, y el formulario de contacto">
-              <img src="img/modal-proyectos/diuba-header-conctato.jpg" alt="Publicaciones">
+            <div class="thumbnail" data-image="img/modal-proyectos/diuba-header-conctato.jpg">
+              <img src="img/modal-proyectos/diuba-header-conctato.jpg" alt="Contacto">
             </div>
-            <div class="carousel-thumbnail" data-image="img/modal-proyectos/diuba-formulario-conctato.jpg" data-title="Formulario de Contacto" data-desc="Formulario de contacto para consultas académicas">
+            <div class="thumbnail" data-image="img/modal-proyectos/diuba-formulario-conctato.jpg">
               <img src="img/modal-proyectos/diuba-formulario-conctato.jpg" alt="Formulario de contacto">
             </div>
-            <div class="carousel-thumbnail" data-image="img/modal-proyectos/diuba-datos-conctato.jpg" data-title="Informacion de Contacto y Ubicacion" data-desc="Informacion de contacto y ubicacion de la direccion de investigacion, y el formulario de contacto">
+            <div class="thumbnail" data-image="img/modal-proyectos/diuba-datos-conctato.jpg">
               <img src="img/modal-proyectos/diuba-datos-conctato.jpg" alt="Datos de contacto">
             </div>
           </div>
-          
-          <div class="carousel-info-grid">
-            <div class="carousel-description">
-              <h4>Descripción</h4>
-              <p>
-                Página informativa diseñada para la Dirección de Investigación de la Universidad Bicentenaria de Aragua, con secciones dedicadas a eventos, líneas de investigación y un formulario de contacto para facilitar la comunicación. El sitio incluye un repositorio de publicaciones académicas y un calendario de actividades de investigación.
-              </p>
-            </div>
-            <div class="carousel-meta">
-              <h4>Detalles del Proyecto</h4>
-              <ul class="meta-list">
-                <li><strong>Cliente:</strong> <span>Universidad Bicentenaria de Aragua</span></li>
-                <li><strong>Fecha:</strong> <span>Abril 2025</span></li>
-                <li><strong>Categoría:</strong> <span>Sitio Web Institucional</span></li>
-                <li><strong>Tecnologías:</strong> <span>PHP, Bootstrap, JavaScript</span></li>
+        </div>
+
+        <div class="modal-info">
+          <div class="project-details">
+            <h3>Descripción del Proyecto</h3>
+            <p>Página informativa diseñada para la Dirección de Investigación de la Universidad Bicentenaria de Aragua.
+              El sitio incluye secciones sobre la misión, visión, servicios ofrecidos y un formulario de contacto.</p>
+
+            <div class="project-features">
+              <h4>Características principales:</h4>
+              <ul>
+                <li><i class="fas fa-check"></i> Diseño responsive</li>
+                <li><i class="fas fa-check"></i> Sección de misión y visión</li>
+                <li><i class="fas fa-check"></i> Información sobre servicios</li>
+                <li><i class="fas fa-check"></i> Formulario de contacto</li>
               </ul>
+            </div>
+          </div>
+          <div class="project-meta">
+            <div class="meta-item">
+              <i class="fas fa-user"></i>
+              <div>
+                <span class="meta-label">Cliente</span>
+                <span class="meta-value">Dirección de Investigación UBA</span>
+              </div>
+            </div>
+            <div class="meta-item">
+              <i class="fas fa-calendar"></i>
+              <div>
+                <span class="meta-label">Fecha</span>
+                <span class="meta-value">Abril 2025</span>
+              </div>
+            </div>
+            <div class="meta-item">
+              <i class="fas fa-tag"></i>
+              <div>
+                <span class="meta-label">Categoría</span>
+                <span class="meta-value">Institucional</span>
+              </div>
+            </div>
+            <div class="meta-item">
+              <i class="fas fa-code"></i>
+              <div>
+                <span class="meta-label">Tecnologías</span>
+                <div class="tech-tags">
+                  <span>PHP</span>
+                  <span>HTML</span>
+                  <span>Bootstrap</span>
+                  <span>JavaScript</span>
+                </div>
+              </div>
             </div>
           </div>
         </div>
       </div>
     </div>
   </div>
-  
-  <!-- Modal para detalles del proyecto 7: Dashboard de Gestión de Eventos -->
-  <div id="projectModal7" class="project-modal">
-    <div class="modal-content">
+
+  <!-- Modal para Proyecto 7 -->
+  <div id="projectModal7" class="modern-modal">
+    <div class="modal-backdrop"></div>
+    <div class="modal-container">
       <div class="modal-header">
-        <h3>Dashboard de Gestión de Eventos</h3>
-        <button class="close-modal" aria-label="Cerrar">×</button>
+        <div class="modal-title">
+          <h2>Dashboard de Gestión de Eventos</h2>
+          <div class="modal-subtitle">Panel administrativo para eventos</div>
+        </div>
+        <button class="modal-close">
+          <i class="fas fa-times"></i>
+        </button>
       </div>
-      <div class="modal-body">
-        <div class="carousel-container">
-          <div class="carousel-main-image">
-            <img id="mainImage7" src="img/modal-proyectos/dashboard-DIED-inicio.jpg" alt="Dashboard de Gestión de Eventos">   
-            <div class="carousel-caption">
-              <h4 id="captionTitle7">Panel principal</h4>
-              <p id="captionDesc7">Dashboard administrativo para gestión de eventos</p>
+
+      <div class="modal-content">
+        <div class="modal-gallery">
+          <div class="gallery-main">
+            <img id="mainImage7" src="img/modal-proyectos/dashboard-DIED-inicio.jpg"
+              alt="Dashboard de Gestión de Eventos">
+            <div class="gallery-controls">
+              <button class="gallery-btn prev-btn">
+                <i class="fas fa-chevron-left"></i>
+              </button>
+              <button class="gallery-btn next-btn">
+                <i class="fas fa-chevron-right"></i>
+              </button>
             </div>
-            <div class="carousel-controls">
-              <button class="carousel-arrow carousel-prev" aria-label="Anterior">
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                  <polyline points="15 18 9 12 15 6"></polyline>
-                </svg>
-              </button>
-              <button class="carousel-arrow carousel-next" aria-label="Siguiente">
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                  <polyline points="9 18 15 12 9 6"></polyline>
-                </svg>
-              </button>
+            <div class="gallery-counter">
+              <span class="current-slide">1</span> / <span class="total-slides">5</span>
             </div>
           </div>
-          
-          <div class="carousel-thumbnails">
-            <div class="carousel-thumbnail active" data-image="img/modal-proyectos/dashboard-DIED-inicio.jpg" data-title="Panel principal" data-desc="Dashboard administrativo para gestión de eventos">
+
+          <div class="gallery-thumbnails">
+            <div class="thumbnail active" data-image="img/modal-proyectos/dashboard-DIED-inicio.jpg">
               <img src="img/modal-proyectos/dashboard-DIED-inicio.jpg" alt="Panel principal">
             </div>
-            <div class="carousel-thumbnail" data-image="img/modal-proyectos/dashboard-DIED-eventos.jpg" data-title="Gestion de los Eventos" data-desc="Interfaz para visualizar y filtrar eventos, con formulario de creación y edición">
+            <div class="thumbnail" data-image="img/modal-proyectos/dashboard-DIED-eventos.jpg">
               <img src="img/modal-proyectos/dashboard-DIED-eventos.jpg" alt="Listado de eventos">
             </div>
-            <div class="carousel-thumbnail" data-image="img/modal-proyectos/dashboard-DIED-galeria.jpg" data-title="Gestion de la Galeria de Eventos" data-desc="Interfaz para gestionar el carrucel de imágenes de los eventos, con opciones de carga y edición">
-              <img src="img/modal-proyectos/dashboard-DIED-galeria.jpg" alt="Gestor de galería">  
+            <div class="thumbnail" data-image="img/modal-proyectos/dashboard-DIED-galeria.jpg">
+              <img src="img/modal-proyectos/dashboard-DIED-galeria.jpg" alt="Gestor de galería">
             </div>
-            <div class="carousel-thumbnail" data-image="img/modal-proyectos/dashboard-DIED-videos.jpg" data-title="Gestor de Videos" data-desc="Interfaz para gestionar videos de eventos mediantes enlace de Youtube, con opciones de carga y edición">
+            <div class="thumbnail" data-image="img/modal-proyectos/dashboard-DIED-videos.jpg">
               <img src="img/modal-proyectos/dashboard-DIED-videos.jpg" alt="Gestor de videos">
             </div>
-            <div class="carousel-thumbnail" data-image="img/modal-proyectos/dashboard-DIED-configuracion.jpg" data-title="Configuracion de usuarios" data-desc="Se diseña esta seccion para la configuracion de los usuarios, para poder cambiar la contraseña y el nombre de usuario">
-              <img src="img/modal-proyectos/dashboard-DIED-configuracion.jpg" alt="Configuracion del usuario">
+            <div class="thumbnail" data-image="img/modal-proyectos/dashboard-DIED-configuracion.jpg">
+              <img src="img/modal-proyectos/dashboard-DIED-configuracion.jpg" alt="Configuración del usuario">
             </div>
           </div>
-          
-          <div class="carousel-info-grid">
-            <div class="carousel-description">
-              <h4>Descripción</h4>
-              <p>
-                Panel administrativo para gestionar eventos y galerías multimedia, con funciones de agregar, editar y eliminar contenido reflejado automáticamente en la página principal. El sistema incluye herramientas para programar eventos, gestionar asistentes, y generar reportes de participación.
-              </p>
-            </div>
-            <div class="carousel-meta">
-              <h4>Detalles del Proyecto</h4>
-              <ul class="meta-list">
-                <li><strong>Cliente:</strong> <span>Organizadora de Eventos Corporativos</span></li>
-                <li><strong>Fecha:</strong> <span>Abril 2025</span></li>
-                <li><strong>Categoría:</strong> <span>Aplicación Web</span></li>
-                <li><strong>Tecnologías:</strong> <span>PHP, SQL, JavaScript</span></li>
+        </div>
+
+        <div class="modal-info">
+          <div class="project-details">
+            <h3>Descripción del Proyecto</h3>
+            <p>Panel administrativo para gestionar eventos y galerías multimedia, con funciones de agregar, editar y
+              eliminar contenido reflejado automáticamente en la página principal. El sistema incluye herramientas para
+              programar eventos, gestionar asistentes, y generar reportes de participación.</p>
+
+            <div class="project-features">
+              <h4>Características principales:</h4>
+              <ul>
+                <li><i class="fas fa-check"></i> Gestión de eventos</li>
+                <li><i class="fas fa-check"></i> Galería multimedia</li>
+                <li><i class="fas fa-check"></i> Gestión de videos</li>
+                <li><i class="fas fa-check"></i> Configuración de usuarios</li>
+                <li><i class="fas fa-check"></i> Generación de reportes</li>
               </ul>
+            </div>
+          </div>
+
+          <div class="project-meta">
+            <div class="meta-item">
+              <i class="fas fa-user"></i>
+              <div>
+                <span class="meta-label">Cliente</span>
+                <span class="meta-value">Organizadora de Eventos Corporativos</span>
+              </div>
+            </div>
+
+            <div class="meta-item">
+              <i class="fas fa-calendar"></i>
+              <div>
+                <span class="meta-label">Fecha</span>
+                <span class="meta-value">Abril 2025</span>
+              </div>
+            </div>
+
+            <div class="meta-item">
+              <i class="fas fa-tag"></i>
+              <div>
+                <span class="meta-label">Categoría</span>
+                <span class="meta-value">Aplicación Web</span>
+              </div>
+            </div>
+
+            <div class="meta-item">
+              <i class="fas fa-code"></i>
+              <div>
+                <span class="meta-label">Tecnologías</span>
+                <div class="tech-tags">
+                  <span>PHP</span>
+                  <span>SQL</span>
+                  <span>JavaScript</span>
+                </div>
+              </div>
             </div>
           </div>
         </div>
       </div>
     </div>
   </div>
-  
-  <!-- Modal para detalles del pagina de enlaces -->
-  <div id="projectModal8" class="project-modal">
-    <div class="modal-content">
+
+  <!-- Modal para Proyecto 8 -->
+  <div id="projectModal8" class="modern-modal">
+    <div class="modal-backdrop"></div>
+    <div class="modal-container">
       <div class="modal-header">
-        <h3>Pagina de Enlaces</h3>
-        <button class="close-modal" aria-label="Cerrar">×</button>
+        <div class="modal-title">
+          <h2>Pagina de Enlaces</h2>
+          <div class="modal-subtitle">Centralizador de enlaces</div>
+        </div>
+        <button class="modal-close">
+          <i class="fas fa-times"></i>
+        </button>
       </div>
-      <div class="modal-body">
-        <div class="carousel-container">
-          <div class="carousel-main-image">
-            <img id="mainImage8" src="img/modal-proyectos/pagina-enlaces.jpg" alt="Pasgina de Enlaces">   
-            <div class="carousel-caption">
-                <h4 id="captionTitle8">Página de Enlace</h4>
-                <p id="captionDesc8">Portal diseñado para centralizar enlaces de redes sociales, códigos promocionales, suscripciones y otros recursos importantes de manera organizada y accesible</p>
+
+      <div class="modal-content">
+        <div class="modal-gallery">
+          <div class="gallery-main">
+            <img id="mainImage8" src="img/modal-proyectos/pagina-enlaces.jpg" alt="Página de Enlaces">
+            <div class="gallery-controls">
+              <button class="gallery-btn prev-btn">
+                <i class="fas fa-chevron-left"></i>
+              </button>
+              <button class="gallery-btn next-btn">
+                <i class="fas fa-chevron-right"></i>
+              </button>
             </div>
-            <div class="carousel-controls">
-              <button class="carousel-arrow carousel-prev" aria-label="Anterior">
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                  <polyline points="15 18 9 12 15 6"></polyline>
-                </svg>
-              </button>
-              <button class="carousel-arrow carousel-next" aria-label="Siguiente">
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                  <polyline points="9 18 15 12 9 6"></polyline>
-                </svg>
-              </button>
+            <div class="gallery-counter">
+              <span class="current-slide">1</span> / <span class="total-slides">1</span>
             </div>
           </div>
-          
-          <div class="carousel-thumbnails">
-            <div class="carousel-thumbnail active" data-image="img/modal-proyectos/pagina-enlaces.jpg" data-title="Página de Enlaces" data-desc="Portal diseñado para centralizar enlaces de redes sociales, códigos promocionales, suscripciones y otros recursos importantes de manera organizada y accesible">
+
+          <div class="gallery-thumbnails">
+            <div class="thumbnail active" data-image="img/modal-proyectos/pagina-enlaces.jpg">
               <img src="img/modal-proyectos/pagina-enlaces.jpg" alt="Página principal">
             </div>
           </div>
-          
-          <div class="carousel-info-grid">
-            <div class="carousel-description">
-              <h4>Descripción</h4>
-                <p>
-                Diseño y desarrollo de una página de enlaces, que permite centralizar múltiples enlaces en un solo lugar. Ideal para compartir redes sociales, códigos promocionales, enlaces de suscripción y otros recursos importantes de manera organizada y accesible.
-                </p>
-            </div>
-            <div class="carousel-meta">
-              <h4>Detalles del Proyecto</h4>
-              <ul class="meta-list">
-                <li><strong>Cliente:</strong> <span>Joharith Perez</span></li>
-                <li><strong>Fecha:</strong> <span>Marzo 2025</span></li>
-                <li><strong>Categoría:</strong> <span>Pagina de Enlaces</span></li>
-                <li><strong>Tecnologías:</strong> <span>HTML, CSS, Bootstrap</span></li>
+        </div>
+
+        <div class="modal-info">
+          <div class="project-details">
+            <h3>Descripción del Proyecto</h3>
+            <p>Diseño y desarrollo de una página de enlaces, que permite centralizar múltiples enlaces en un solo lugar.
+              Ideal para compartir redes sociales, códigos promocionales, enlaces de suscripción y otros recursos
+              importantes de manera organizada y accesible.</p>
+
+            <div class="project-features">
+              <h4>Características principales:</h4>
+              <ul>
+                <li><i class="fas fa-check"></i> Diseño minimalista</li>
+                <li><i class="fas fa-check"></i> Organización por categorías</li>
+                <li><i class="fas fa-check"></i> Acceso rápido</li>
+                <li><i class="fas fa-check"></i> Compatible con móviles</li>
+                <li><i class="fas fa-check"></i> Fácil actualización</li>
               </ul>
+            </div>
+          </div>
+
+          <div class="project-meta">
+            <div class="meta-item">
+              <i class="fas fa-user"></i>
+              <div>
+                <span class="meta-label">Cliente</span>
+                <span class="meta-value">Joharith Perez</span>
+              </div>
+            </div>
+
+            <div class="meta-item">
+              <i class="fas fa-calendar"></i>
+              <div>
+                <span class="meta-label">Fecha</span>
+                <span class="meta-value">Marzo 2025</span>
+              </div>
+            </div>
+
+            <div class="meta-item">
+              <i class="fas fa-tag"></i>
+              <div>
+                <span class="meta-label">Categoría</span>
+                <span class="meta-value">Página de Enlaces</span>
+              </div>
+            </div>
+
+            <div class="meta-item">
+              <i class="fas fa-code"></i>
+              <div>
+                <span class="meta-label">Tecnologías</span>
+                <div class="tech-tags">
+                  <span>HTML</span>
+                  <span>CSS</span>
+                  <span>Bootstrap</span>
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -826,7 +1318,8 @@
         <div class="social-links">
           <a href="https://www.tiktok.com/@raudie.dev?lang=es" aria-label="Tiktok">
             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
-              <path d="M9 0h1.98c.144.715.54 1.617 1.235 2.512C12.895 3.389 13.797 4 15 4v2c-1.753 0-3.07-.814-4-1.829V11a5 5 0 1 1-5-5v2a3 3 0 1 0 3 3z"/>
+              <path
+                d="M9 0h1.98c.144.715.54 1.617 1.235 2.512C12.895 3.389 13.797 4 15 4v2c-1.753 0-3.07-.814-4-1.829V11a5 5 0 1 1-5-5v2a3 3 0 1 0 3 3z" />
             </svg>
           </a>
           <a href="#" aria-label="Facebook">
@@ -854,10 +1347,11 @@
 
   <!-- Botón flotante de WhatsApp -->
   <div class="floating-buttons">
-        <a href="https://wa.me/584127360431" class="floating-btn whatsapp-btn" target="_blank">
-            <i class="fab fa-whatsapp"></i>
-        </a>
-    </div>
+    <a href="https://wa.me/584127360431" class="floating-btn whatsapp-btn" target="_blank">
+      <i class="fab fa-whatsapp"></i>
+    </a>
+  </div>
+
   <!-- Scroll Top Button -->
   <a href="#" id="scroll-top" class="scroll-top" aria-label="Volver arriba">
     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"

@@ -4,8 +4,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>RauDie | Company</title>
-  <meta name="description" content="RauDie Software Company - Transformando Ideas en Realidad Digital">
+  <title>RauDie Software Company - Transformando Ideas en Realidad Digital</title>
+  <meta name="description" content="Ofrecemos soluciones tecnológicas a medida para potenciar el crecimiento de tu negocio. Desde desarrollo front-end hasta back-end, te acompañamos en cada paso.">
 
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -25,7 +25,7 @@
   <header class="header">
     <div class="container">
       <div class="header-inner">
-        <a href="/" class="logo">
+        <a href="index.html" class="logo">
           <img src="img/nav-img.png" alt="RauDie Logo">
           <h1>RAUDIE</h1>
         </a>
@@ -33,7 +33,7 @@
         <div class="menu-overlay"></div>
         <nav class="nav-menu">
           <ul>
-            <li><a href="#hero" class="active">Inicio</a></li>
+            <li><a href="#hero">Inicio</a></li>
             <li><a href="#about">Quienes Somos</a></li>
             <li class="has-submenu">
               <a href="#services">Servicios</a>
@@ -46,7 +46,7 @@
                 <li><a href="servicios/seo.html">Optimización SEO</a></li>
               </ul>
             </li>
-            <li><a href="#projects">Proyectos</a></li>
+            <li><a href="proyectos.html">Proyecto</a></li>
             <li><a href="#contact">Contactos</a></li>
           </ul>
         </nav>
@@ -59,26 +59,49 @@
     </div>
   </header>
 
-  <m>
+  <main>
     <!-- Hero Section -->
-    <section id="hero" class="hero section">
+    <section id="hero" class="hero">
       <div class="container">
         <div class="hero-content">
           <div class="hero-text">
-            <h2>RauDie Software Company</h2>
-            <p>Ofrecemos soluciones tecnológicas a medida para potenciar el crecimiento de tu negocio. Desde desarrollo
-              front-end hasta back-end, te acompañamos en cada paso.</p>
-            <div>
-              <a href="#about" class="btn-primary">Empezar ahora</a>
+            <div class="hero-badge">
+              <i class="fas fa-rocket"></i>
+              <span>Transformando Ideas en Realidad Digital</span>
+            </div>
+            <h1>RauDie <span class="text-gradient">Software</span> Company</h1>
+            <p>Desarrollamos sitios web modernos, eficientes y orientados a resultados para impulsar el crecimiento y la presencia digital de tu negocio.</p>
+            <div class="hero-buttons">
+              <a href="#contact" class="btn-primary">
+                <span>Empezar ahora</span>
+                <i class="fas fa-arrow-right"></i>
+              </a>
+              <a href="proyectos.html" class="btn-secondary">
+                <i class="fas fa-play"></i>
+                <span>Ver nuestro trabajo</span>
+              </a>
             </div>
           </div>
-          <div class="hero-media">
-            <video autoplay muted loop playsinline>
-              <source src="img/animacion-logo.mp4" type="video/mp4">
-            </video>
+          <div class="hero-visual">
+            <div class="hero-video-container">
+                <div class="gif-placeholder">
+                   <img src="img/animacion-logo.gif" alt="Animación Logo RauDie" class="hero-gif-img">
+                </div>
+              <!-- Elementos flotantes -->
+              <div class="floating-element element-1">
+                <i class="fas fa-code"></i>
+              </div>
+              <div class="floating-element element-2">
+                <i class="fas fa-mobile-alt"></i>
+              </div>
+              <div class="floating-element element-3">
+                <i class="fas fa-database"></i>
+              </div>
+            </div>
           </div>
         </div>
       </div>
+      <div class="hero-bg"></div>
     </section>
 
     <!-- About Section -->
@@ -86,474 +109,255 @@
       <div class="container">
         <div class="about-content">
           <div class="about-text">
-            <p class="section-tag">¿Quienes Somos?</p>
-            <h3>RauDie Software: Transformando Ideas en Realidad Digital</h3>
+            <div class="section-badge">
+              <i class="fas fa-users"></i>
+              <span>¿Quiénes Somos?</span>
+            </div>
+            <h2>Transformando Ideas en <span class="text-gradient">Realidad Digital</span></h2>
             <p class="about-description">
-              En RauDie Software, somos un equipo apasionado por la tecnología y el desarrollo de software.
-              Nos especializamos en soluciones front-end y back-end, ofreciendo innovación y eficiencia en cada
-              proyecto.
-              Desde interfaces intuitivas hasta arquitecturas sólidas en la nube, nuestro objetivo es ayudar a las
-              empresas a escalar y crecer con confianza. Creemos en la creatividad y la estrategia para impulsar el
-              éxito tecnológico.
+              En RauDie Software, somos un equipo apasionado por la tecnología y el desarrollo de software. 
+              Nos especializamos en soluciones front-end y back-end, ofreciendo innovación y eficiencia en cada proyecto.
             </p>
-            <ul class="feature-list">
-              <li>
-                <span class="icon-check"></span>
-                <span><strong>Innovación:</strong> Expertos en desarrollo front-end y back-end, ofreciendo soluciones
-                  personalizadas para empresas en crecimiento.</span>
-              </li>
-              <li>
-                <span class="icon-check"></span>
-                <span><strong>Colaboración:</strong> Trabajamos de la mano con nuestros clientes, entendiendo sus
-                  necesidades y objetivos.</span>
-              </li>
-              <li>
-                <span class="icon-check"></span>
-                <span><strong>Calidad:</strong> Nos comprometemos a entregar productos robustos y escalables que superen
-                  las expectativas.</span>
-              </li>
-            </ul>
+            <div class="features-grid">
+              <div class="feature-item">
+                <div class="feature-icon">
+                  <i class="fas fa-bolt"></i>
+                </div>
+                <div class="feature-content">
+                  <h3>Innovación</h3>
+                  <p>Expertos en desarrollo front-end y back-end, ofreciendo soluciones personalizadas para empresas en crecimiento.</p>
+                </div>
+              </div>
+              <div class="feature-item">
+                <div class="feature-icon">
+                  <i class="fas fa-handshake"></i>
+                </div>
+                <div class="feature-content">
+                  <h3>Colaboración</h3>
+                  <p>Trabajamos de la mano con nuestros clientes, entendiendo sus necesidades y objetivos.</p>
+                </div>
+              </div>
+              <div class="feature-item">
+                <div class="feature-icon">
+                  <i class="fas fa-award"></i>
+                </div>
+                <div class="feature-content">
+                  <h3>Calidad</h3>
+                  <p>Nos comprometemos a entregar productos robustos y escalables que superen las expectativas.</p>
+                </div>
+              </div>
+            </div>
           </div>
-          <div class="about-image">
-            <img src="https://st4.depositphotos.com/12981370/24312/i/450/depositphotos_243120806-stock-photo-programmer-working-software-development-coding.jpg" alt="Programación">
+          <div class="about-visual">
+            <div class="about-image">
+              <img src="https://online.usc.edu/wp-content/uploads/2025/03/Software-Engineer.png" alt="Equipo de desarrollo">
+              <div class="floating-stats">
+                <div class="floating-stat">
+                  <span class="stat-number">3+</span>
+                  <span class="stat-label">Años de Experiencia</span>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
     </section>
 
     <!-- TikTok Section -->
-    <section id="social-media" class="social-media section">
-  <div class="container">
-    <div class="section-header">
-       <div class="section-badge">Conocenos</div>
-      <h2><span>Síguenos en</span> <span class="highlight">TikTok</span></h2>
-    </div>
-    
-    <div class="tiktok-container">
-      <div class="tiktok-wrapper">
-        <blockquote class="tiktok-embed" cite="https://www.tiktok.com/@raudie.dev" data-unique-id="raudie.dev" data-embed-type="creator" style="max-width: 780px; min-width: 288px;">
-          <section>
-            <a target="_blank" href="https://www.tiktok.com/@raudie.dev?refer=creator_embed">@raudie.dev</a>
-          </section>
-        </blockquote>
-      </div>
-      <div class="tiktok-info">
-        <h3>Conéctate con Nosotros</h3>
-        <p>Síguenos en TikTok para descubrir tutoriales, consejos de programación y un vistazo exclusivo a nuestros proyectos más innovadores. ¡Aprende y diviértete con nuestro contenido tecnológico!</p>
-        
-        <div class="tiktok-cta">
-          <a href="https://www.tiktok.com/@raudie.dev" class="btn-primary" target="_blank">
-            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <path d="M9 18l6-6-6-6"></path>
-            </svg>
-            Visitar nuestro TikTok
-          </a>
+    <section class="tiktok-section section">
+      <div class="container">
+        <div class="tiktok-content">
+          <div class="tiktok-embed">
+            <div class="tiktok-placeholder">
+               <blockquote class="tiktok-embed" cite="https://www.tiktok.com/@raudie.dev" data-unique-id="raudie.dev" data-embed-type="creator" style="max-width: 780px; min-width: 288px;" > <section> <a target="_blank" href="https://www.tiktok.com/@raudie.dev?refer=creator_embed">@raudie.dev</a> </section> </blockquote> <script async src="https://www.tiktok.com/embed.js"></script>
+            </div>
+          </div>
+          <div class="tiktok-info">
+            <div class="section-badge">
+              <i class="fab fa-tiktok"></i>
+              <span>Conócenos</span>
+            </div>
+            <h2>Síguenos en <span class="text-gradient">TikTok</span></h2>
+            <p>Síguenos en TikTok para descubrir tutoriales, consejos de programación y un vistazo exclusivo a nuestros
+               proyectos más innovadores. ¡Aprende y diviértete con nuestro contenido tecnológico!</p>
+
+            <a href="https://www.tiktok.com/@raudie.dev" target="_blank" class="btn-primary">
+              <i class="fas fa-external-link-alt"></i>
+              <span>Visitar nuestro TikTok</span>
+            </a>
+          </div>
         </div>
       </div>
-    </div>
-  </div>
-</section>
+    </section>
 
     <!-- Services Section -->
     <section id="services" class="services section">
       <div class="container">
         <div class="section-header">
-          <span class="section-badge">Servicios</span>
-          <h2><span>¡Consulta Ya!</span> <span class="highlight">Nuestros Servicios</span></h2>
+          <div class="section-badge">
+            <i class="fas fa-cogs"></i>
+            <span>Servicios</span>
+          </div>
+          <h2>¡Consulta Ya! <span class="text-gradient">Nuestros Servicios</span></h2>
         </div>
+        
+        <!-- Services Carousel Container -->
+        <div class="services-carousel-container">
+          <div class="services-carousel">
+            <div class="service-card">
+              <div class="service-icon">
+                <i class="fas fa-link"></i>
+              </div>
+              <h3>Enlaces Personalizados</h3>
+              <p>Solución práctica para agrupar y compartir todos tus enlaces importantes en un solo lugar. Perfecto para maximizar tu presencia digital.</p>
+              <div class="service-price">$25</div>
+              <a href="servicios/enlaces.html" class="service-link">
+                <span>Ver detalles</span>
+                <i class="fas fa-arrow-right"></i>
+              </a>
+            </div>
 
-        <div class="services-grid">
-          <a href="servicios/enlaces.html" class="service-card">
-            <div class="service-icon">
-              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
-                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path>
-                <path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path>
-              </svg>
+            <div class="service-card">
+              <div class="service-icon">
+                <i class="fas fa-desktop"></i>
+              </div>
+              <h3>Landing Básica</h3>
+              <p>Página de aterrizaje sencilla con información esencial de tu negocio. Perfecta para pequeños emprendimientos.</p>
+              <div class="service-price">$150</div>
+              <a href="servicios/landing-basica.html" class="service-link">
+                <span>Ver detalles</span>
+                <i class="fas fa-arrow-right"></i>
+              </a>
             </div>
-            <h3>Enlace Personalizados</h3>
-            <p>
-              Solución práctica para agrupar y compartir todos tus enlaces importantes en un solo lugar. Perfecto para
-              maximizar tu presencia digital y facilitar el acceso a tus recursos.
-            </p>
-            <div class="service-cta">
-              <span class="btn-text">Ver detalles</span>
-            </div>
-          </a>
 
-          <a href="servicios/landing-basica.html" class="service-card">
-            <div class="service-icon">
-              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
-                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
-                <line x1="8" y1="21" x2="16" y2="21"></line>
-                <line x1="12" y1="17" x2="12" y2="21"></line>
-              </svg>
+            <div class="service-card">
+              <div class="service-icon">
+                <i class="fas fa-rocket"></i>
+              </div>
+              <h3>Landing Profesional</h3>
+              <p>Página de aterrizaje completa con diseño profesional, animaciones y múltiples secciones. Ideal para empresas establecidas.</p>
+              <div class="service-price">$300</div>
+              <a href="servicios/landing-profesional.html" class="service-link">
+                <span>Ver detalles</span>
+                <i class="fas fa-arrow-right"></i>
+              </a>
             </div>
-            <h3>Landing Básica</h3>
-            <p>
-              Página de aterrizaje sencilla con información esencial de tu negocio. Perfecta para pequeños
-              emprendimientos y profesionales independientes.
-            </p>
-            <div class="service-cta">
-              <span class="btn-text">Ver detalles</span>
-            </div>
-          </a>
 
-          <a href="servicios/landing-profesional.html" class="service-card">
-            <div class="service-icon">
-              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
-                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <path d="M12 19l7-7 3 3-7 7-3-3z"></path>
-                <path d="M18 13l-1.5-7.5L2 2l3.5 14.5L13 18l5-5z"></path>
-                <path d="M2 2l7.586 7.586"></path>
-                <circle cx="11" cy="11" r="2"></circle>
-              </svg>
+            <div class="service-card">
+              <div class="service-icon">
+                <i class="fas fa-star"></i>
+              </div>
+              <h3>Proyectos Personalizados</h3>
+              <p>Soluciones web a medida según las necesidades específicas de tu empresa. Desde tiendas online hasta aplicaciones complejas.</p>
+              <div class="service-price">Consultar</div>
+              <a href="servicios/proyectos-personalizados.html" class="service-link">
+                <span>Ver detalles</span>
+                <i class="fas fa-arrow-right"></i>
+              </a>
             </div>
-            <h3>Landing Profesional</h3>
-            <p>
-              Página de aterrizaje completa con diseño profesional, animaciones y múltiples secciones. Ideal para
-              empresas establecidas y startups.
-            </p>
-            <div class="service-cta">
-              <span class="btn-text">Ver detalles</span>
-            </div>
-          </a>
 
-          <a href="servicios/proyectos-personalizados.html" class="service-card">
-            <div class="service-icon">
-              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
-                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <polygon
-                  points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2">
-                </polygon>
-              </svg>
+            <div class="service-card">
+              <div class="service-icon">
+                <i class="fas fa-tools"></i>
+              </div>
+              <h3>Mantenimiento Web</h3>
+              <p>Actualizaciones regulares de contenido y funciones. Soporte técnico y solución de problemas.</p>
+              <div class="service-price">$50/mes</div>
+              <a href="servicios/mantenimiento.html" class="service-link">
+                <span>Ver detalles</span>
+                <i class="fas fa-arrow-right"></i>
+              </a>
             </div>
-            <h3>Proyectos Personalizados</h3>
-            <p>
-              Soluciones web a medida según las necesidades específicas de tu empresa. Desde tiendas online hasta
-              aplicaciones web complejas.
-            </p>
-            <div class="service-cta">
-              <span class="btn-text">Ver detalles</span>
-            </div>
-          </a>
-          
-          <a href="servicios/mantenimiento.html" class="service-card">
-            <div class="service-icon">
-              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
-                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <polyline points="16 18 22 12 16 6"></polyline>
-                <polyline points="8 6 2 12 8 18"></polyline>
-              </svg>
-            </div>
-            <h3>Mantenimiento de sitios web</h3>
-            <p>
-              <strong>Actualizaciones: </strong>Actualización regular de contenido y funciones en el sitio web.
-              <strong>Soporte técnico: </strong>Solución de problemas técnicos o ajustes de diseño.
-            </p>
-            <div class="service-cta">
-              <span class="btn-text">Ver detalles</span>
-            </div>
-          </a>
 
-          <a href="servicios/seo.html" class="service-card">
-            <div class="service-icon">
-              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <path d="M3 3h18v18H3z"></path>
-                <path d="M9 9h6v6H9z"></path>
-              </svg>
+            <div class="service-card">
+              <div class="service-icon">
+                <i class="fas fa-search"></i>
+              </div>
+              <h3>Optimización SEO</h3>
+              <p>Mejora la visibilidad de tu sitio web en los motores de búsqueda con estrategias avanzadas de SEO.</p>
+              <div class="service-price">$50</div>
+              <a href="servicios/seo.html" class="service-link">
+                <span>Ver detalles</span>
+                <i class="fas fa-arrow-right"></i>
+              </a>
             </div>
-            <h3>Optimización SEO</h3>
-            <p>
-              Mejora la visibilidad de tu sitio web en los motores de búsqueda con estrategias avanzadas de SEO.
-            </p>
-            <div class="service-cta">
-              <span class="btn-text">Ver detalles</span>
-            </div>
-          </a>
+          </div>
         </div>
       </div>
     </section>
 
     <!-- Projects Section -->
-    <section id="projects" class="projects section">
+    <section id="projects" class="projects-section">
       <div class="container">
         <div class="section-header">
-          <span class="section-badge">Proyectos</span>
-          <h2><span>Nuestros</span> <span class="highlight">Proyectos Destacados</span></h2>
+          <div class="section-badge">
+            <i class="fas fa-briefcase"></i>
+            <span>Proyectos</span>
+          </div>
+          <h2>Nuestros <span class="text-gradient">Proyectos Destacados</span></h2>
         </div>
-        <div class="projects-page-grid">
-          <!-- Proyecto 1 -->
-          <div class="project-card" data-category="ecommerce web">
+
+        <div class="projects-grid">
+          <div class="project-card">
             <div class="project-image">
               <img src="img/proyectos/proyecto-1.png" alt="E-commerce Panaderia Aroma y Sabor">
+              <div class="project-overlay">
+                <div class="project-category">E-commerce</div>
+              </div>
             </div>
             <div class="project-content">
-              <h3>E-commerce | Panaderia Aroma y Sabor</h3>
-              <p>
-                Desarrollo de tienda online completa de una Panaderia, con su seccion de productos, menú y orden de pedidos.
-              </p>
+              <h3>Panaderia Aroma y Sabor</h3>
+              <p>Desarrollo de tienda online completa de una Panaderia, con su seccion de productos, menú y orden de pedidos.</p>
               <div class="project-tags">
                 <span>HTML</span>
                 <span>JavaScript</span>
                 <span>Python</span>
               </div>
-              <a href="#" class="btn-text view-details" data-project="1">Ver detalles</a>
             </div>
           </div>
 
-          <!-- Proyecto 2 -->
-          <div class="project-card" data-category="web">
+          <div class="project-card">
             <div class="project-image">
               <img src="img/proyectos/proyecto-2.png" alt="Dashboard Administrativo">
+              <div class="project-overlay">
+                <div class="project-category">Dashboard</div>
+              </div>
             </div>
             <div class="project-content">
-              <h3>Dashboard Administrativo | CEIP Mi Mundo Infantil</h3>
-              <p>
-                Panel de control para gestión de los estudiantes, eventos academicos y administracion de los profesores. 
-              </p>
+              <h3>CEIP Mi Mundo Infantil</h3>
+              <p>Panel de control para gestión de los estudiantes, eventos academicos y administracion de los profesores.</p>
               <div class="project-tags">
                 <span>HTML</span>
                 <span>Python</span>
                 <span>Django</span>
-                <span>SQLite3</span>
               </div>
-              <a href="#" class="btn-text view-details" data-project="2">Ver detalles</a>
             </div>
           </div>
 
-          <!-- Proyecto 3 -->
-          <div class="project-card" data-category="web">
+          <div class="project-card">
             <div class="project-image">
               <img src="img/proyectos/proyecto-3.png" alt="Portal Educativo">
+              <div class="project-overlay">
+                <div class="project-category">Landing Page</div>
+              </div>
             </div>
             <div class="project-content">
-              <h3>Landing Page | Mi Mundo Infantil</h3>
-              <p>
-                Página informativa diseñada para una institución de educación inicial, destacando su misión, visión y servicios educativos.
-              </p>
+              <h3>Mi Mundo Infantil</h3>
+              <p>Página informativa diseñada para una institución de educación inicial, destacando su misión, visión y servicios educativos.</p>
               <div class="project-tags">
                 <span>HTML</span>
                 <span>CSS</span>
                 <span>Bootstrap</span>
               </div>
-              <a href="#" class="btn-text view-details" data-project="3">Ver detalles</a>
-            </div>
-          </div>
-          
-          <!-- Modal para detalles del proyecto 1: E-commerce | Panaderia Aroma y Sabor -->
-          <div id="projectModal1" class="project-modal">
-            <div class="modal-content">
-              <div class="modal-header">
-                <h3>E-commerce | Panaderia Aroma y Sabor</h3>
-                <button class="close-modal" aria-label="Cerrar">×</button>
-              </div>
-              <div class="modal-body">
-                <div class="carousel-container">
-                  <div class="carousel-main-image">
-                    <img id="mainImage1" src="img/modal-proyectos/aroma-header.jpg" alt="E-commerce Panaderia Aroma y Sabor">   
-                    <div class="carousel-caption">
-                      <h4 id="captionTitle1">E-commerce Panaderia Aroma y Sabor</h4>
-                      <p id="captionDesc1">Vista principal de la tienda online con productos destacados</p>
-                    </div>
-                    <div class="carousel-controls">
-                      <button class="carousel-arrow carousel-prev" aria-label="Anterior">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                          <polyline points="15 18 9 12 15 6"></polyline>
-                        </svg>
-                      </button>
-                      <button class="carousel-arrow carousel-next" aria-label="Siguiente">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                          <polyline points="9 18 15 12 9 6"></polyline>
-                        </svg>
-                      </button>
-                    </div>
-                  </div>
-                  
-                  <div class="carousel-thumbnails">
-                    <div class="carousel-thumbnail active" data-image="img/modal-proyectos/aroma-header.jpg" data-title="E-commerce Panaderia Aroma y Sabor" data-desc="Vista principal de la tienda online con productos destacados">
-                      <img src="img/modal-proyectos/aroma-header.jpg" alt="Vista principal">
-                    </div>
-                    <div class="carousel-thumbnail" data-image="img/modal-proyectos/aroma-productos.jpg" data-title="Catálogo de productos" data-desc="Sección que muestra todos los productos detallada que tiene la tienda disponible, con su respectiva descripcion">
-                      <img src="img/modal-proyectos/aroma-productos.jpg" alt="Catálogo de productos">
-                    </div>
-                    <div class="carousel-thumbnail" data-image="img/modal-proyectos/aroma-historia.jpg" data-title="Seccion de la Historia de la Tienda" data-desc="Esta seccion incluye la historia de nuestra tienda junto con imagenes de nuestras instalaciones">
-                      <img src="img/modal-proyectos/aroma-historia.jpg" alt="Carrito de compras">
-                    </div>
-                    <div class="carousel-thumbnail" data-image="img/modal-proyectos/aroma-menujpg.jpg" data-title="Menú" data-desc="Esta seccion permite al cliente ver el menu de la tienda, con sus respectivos precios yh lo que esta disponibe en este momento">
-                      <img src="img/modal-proyectos/aroma-menujpg.jpg" alt="Panel de administración">
-                    </div>
-                    <div class="carousel-thumbnail" data-image="img/modal-proyectos/aroma-contacto.jpg" data-title="Informacion de Contacto" data-desc="Esta seccion se añade la ubicacion de la tienda sus horarios y el contacto con el cliente, numero de telefono y correo electronico">
-                      <img src="img/modal-proyectos/aroma-contacto.jpg" alt="Proceso de checkout">
-                    </div>
-                  </div>
-                  
-                  <div class="carousel-info-grid">
-                    <div class="carousel-description">
-                      <h4>Descripción</h4>
-                      <p>
-                        Desarrollo de una tienda online completa para una panadería artesanal. El sitio incluye catálogo de productos, sistema de carrito de compras, proceso de checkout y panel de administración para gestionar productos, pedidos y clientes. La plataforma permite a los clientes realizar pedidos personalizados y programar entregas.
-                      </p>
-                    </div>
-                    <div class="carousel-meta">
-                      <h4>Detalles del Proyecto</h4>
-                      <ul class="meta-list">
-                        <li><strong>Cliente:</strong> <span>Panadería Aroma y Sabor</span></li>
-                        <li><strong>Fecha:</strong> <span>Octubre 2024</span></li>
-                        <li><strong>Categoría:</strong> <span>E-commerce</span></li>
-                        <li><strong>Tecnologías:</strong> <span>HTML, JavaScript, Python</span></li>
-                      </ul>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          
-          <!-- Modal para detalles del proyecto 2: Dashboard Administrativo | CEIP Mi Mundo Infantil -->
-          <div id="projectModal2" class="project-modal">
-            <div class="modal-content">
-              <div class="modal-header">
-                <h3>Dashboard Administrativo | CEIP Mi Mundo Infantil</h3>
-                <button class="close-modal" aria-label="Cerrar">×</button>
-              </div>
-              <div class="modal-body">
-                <div class="carousel-container">
-                  <div class="carousel-main-image">
-                    <img id="mainImage2" src="img/modal-proyectos/dashboard-MMI-Listado-Estuduantes.jpg" alt="Dashboard Administrativo">   
-                    <div class="carousel-caption">
-                      <h4 id="captionTitle2">Dashboard principal</h4>
-                      <p id="captionDesc2">Iniciamos en el rol del profesor donde dependiendiendo del aula que le toque, puede ver el listados de estudiantes agregados a su aula</p>
-                    </div>
-                    <div class="carousel-controls">
-                      <button class="carousel-arrow carousel-prev" aria-label="Anterior">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                          <polyline points="15 18 9 12 15 6"></polyline>
-                        </svg>
-                      </button>
-                      <button class="carousel-arrow carousel-next" aria-label="Siguiente">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                          <polyline points="9 18 15 12 9 6"></polyline>
-                        </svg>
-                      </button>
-                    </div>
-                  </div>
-                  
-                  <div class="carousel-thumbnails">
-                    <div class="carousel-thumbnail active" data-image="img/modal-proyectos/dashboard-MMI-Listado-Estuduantes.jpg" data-title="Dashboard principal" data-desc="Iniciamos en el rol del profesor donde dependiendiendo del aula que le toque, puede ver el listados de estudiantes agregados a su aula">
-                      <img src="img/modal-proyectos/dashboard-MMI-Listado-Estuduantes.jpg" alt="Dashboard principal">
-                    </div>
-                    <div class="carousel-thumbnail" data-image="img/modal-proyectos/dashboard-MMI-Gestion-Aulas.jpg" data-title="Gestión de las Aulas" data-desc="En el rol del director podemos ver todas las aulas que tenemos disponibles, y agregar o eliminar aulas y asignarle un profesor y ver el listado de estudiantes que tiene cada aula">
-                      <img src="img/modal-proyectos/dashboard-MMI-Gestion-Aulas.jpg" alt="Gestión de estudiantes">
-                    </div>
-                    <div class="carousel-thumbnail" data-image="img/modal-proyectos/dashboard-MMI-Comentarios-estudiantes.jpg" data-title="Cometarios de profesores" data-desc="En el rol del profesor podemos ver los cometarios que han dejado de sus estudiantes, el cual el director lleva un monitoreo de cada uno de los estudiantes">
-                      <img src="img/modal-proyectos/dashboard-MMI-Comentarios-estudiantes.jpg" alt="Calendario de eventos">
-                    </div>
-                    <div class="carousel-thumbnail" data-image="img/modal-proyectos/dashboard-MMI-configuracion-user.jpg" data-title="Configuracion del usuario" data-desc="Los usuarios pueden cambiar su contraseña y correo electronico para poder tener acceso a la plataforma, y el director puede ver los usuarios que tiene registrados en la plataforma">
-                      <img src="img/modal-proyectos/dashboard-MMI-configuracion-user.jpg" alt="Generación de reportes">
-                    </div>
-                  </div>
-                  
-                  <div class="carousel-info-grid">
-                    <div class="carousel-description">
-                      <h4>Descripción</h4>
-                      <p>
-                        Panel de control completo para la gestión académica de una institución educativa. El sistema permite administrar estudiantes, profesores, eventos académicos, calificaciones y comunicaciones. Incluye generación de reportes, seguimiento de asistencia y módulo de comunicación con padres y representantes.
-                      </p>
-                    </div>
-                    <div class="carousel-meta">
-                      <h4>Detalles del Proyecto</h4>
-                      <ul class="meta-list">
-                        <li><strong>Cliente:</strong> <span>CEIP Mi Mundo Infantil</span></li>
-                        <li><strong>Fecha:</strong> <span>Enero 2025</span></li>
-                        <li><strong>Categoría:</strong> <span>Aplicación Web</span></li>
-                        <li><strong>Tecnologías:</strong> <span>HTML, Python, Django, SQLite3</span></li>
-                      </ul>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          
-          <!-- Modal para detalles del proyecto 3: Landing Page | Mi Mundo Infantil -->
-          <div id="projectModal3" class="project-modal">
-            <div class="modal-content">
-              <div class="modal-header">
-                <h3>Landing Page | Mi Mundo Infantil</h3>
-                <button class="close-modal" aria-label="Cerrar">×</button>
-              </div>
-              <div class="modal-body">
-                <div class="carousel-container">
-                  <div class="carousel-main-image">
-                    <img id="mainImage3" src="img/modal-proyectos/MMI-header.jpg" alt="Landing Page Mi Mundo Infantil">   
-                    <div class="carousel-caption">
-                      <h4 id="captionTitle3">Página principal</h4>
-                      <p id="captionDesc3">Diseño atractivo con información clave de la institución</p>
-                    </div>
-                    <div class="carousel-controls">
-                      <button class="carousel-arrow carousel-prev" aria-label="Anterior">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                          <polyline points="15 18 9 12 15 6"></polyline>
-                        </svg>
-                      </button>
-                      <button class="carousel-arrow carousel-next" aria-label="Siguiente">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                          <polyline points="9 18 15 12 9 6"></polyline>
-                        </svg>
-                      </button>
-                    </div>
-                  </div>
-                  
-                  <div class="carousel-thumbnails">
-                    <div class="carousel-thumbnail active" data-image="img/modal-proyectos/MMI-header.jpg" data-title="Encabezado de la Pagina" data-desc="Diseño atractivo con información clave de la institución">
-                      <img src="img/modal-proyectos/MMI-header.jpg" alt="Página principal">
-                    </div>
-                    <div class="carousel-thumbnail" data-image="img/modal-proyectos/MMI-porque-elegirnos.jpg" data-title="Sección ¿Porque Elegirnos?" data-desc="Presentación de qe nos hace difernetes a las demás instituciones">
-                      <img src="img/modal-proyectos/MMI-porque-elegirnos.jpg" alt="Sección ¿Porque Elegirnos?">
-                    </div>
-                    <div class="carousel-thumbnail" data-image="img/modal-proyectos/MMI-programas.jpg" data-title="Servicios educativos" data-desc="Detalle de los programas y metodologías educativas">
-                      <img src="img/modal-proyectos/MMI-programas.jpg" alt="Servicios educativos">
-                    </div>
-                    <div class="carousel-thumbnail" data-image="img/modal-proyectos/MMI-reforzamiento.jpg" data-title="Seccion de Refozamiento Pedagogico" data-desc="Recorrido visual por las áreas de la institución">
-                      <img src="img/modal-proyectos/MMI-reforzamiento.jpg" alt="Refozamiento Pedagogico">
-                    </div>
-                    <div class="carousel-thumbnail" data-image="img/modal-proyectos/MMI-horarios.jpg" data-title="Horarios de la Institución" data-desc="Horarios de atención, actividades de clases y tareas dirigidas">
-                      <img src="img/modal-proyectos/MMI-horarios.jpg" alt="Horarios de la Institución">
-                    </div>
-                    <div class="carousel-thumbnail" data-image="img/modal-proyectos/MMI-Galeria.jpg" data-title="Galería de instalaciones" data-desc="Recorrido visual por las áreas de la institución y las actividades realizadas">
-                      <img src="img/modal-proyectos/MMI-Galeria.jpg" alt="Galería de instalaciones">
-                    </div>
-                    <div class="carousel-thumbnail" data-image="img/modal-proyectos/MMI-contactos.jpg" data-title="Formulario de contacto" data-desc="Sección para solicitar información adicional">
-                      <img src="img/modal-proyectos/MMI-contactos.jpg" alt="Formulario de contacto">
-                    </div>
-                  </div>
-                  
-                  <div class="carousel-info-grid">
-                    <div class="carousel-description">
-                      <h4>Descripción</h4>
-                      <p>
-                        Página informativa diseñada para una institución de educación inicial, destacando su misión, visión y servicios educativos. El sitio incluye secciones de presentación, galería de instalaciones, información sobre metodología educativa, testimonios de padres y formulario de contacto para solicitar información adicional.
-                      </p>
-                    </div>
-                    <div class="carousel-meta">
-                      <h4>Detalles del Proyecto</h4>
-                      <ul class="meta-list">
-                        <li><strong>Cliente:</strong> <span>CEIP Mi Mundo Infantil</span></li>
-                        <li><strong>Fecha:</strong> <span>Enero 2025</span></li>
-                        <li><strong>Categoría:</strong> <span>Sitio Web</span></li>
-                        <li><strong>Tecnologías:</strong> <span>HTML, CSS, Bootstrap</span></li>
-                      </ul>
-                    </div>
-                  </div>
-                </div>
-              </div>
             </div>
           </div>
         </div>
+
         <div class="view-more-container">
-          <a href="proyectos.html" class="btn-primary">Ver más proyectos</a>
+          <a href="proyectos.html" class="btn-primary">
+            <span>Ver más proyectos</span>
+            <i class="fas fa-arrow-right"></i>
+          </a>
         </div>
       </div>
     </section>
@@ -561,72 +365,65 @@
     <!-- Contact Section -->
     <section id="contact" class="contact section">
       <div class="container">
-        <div class="section-header">
-          <span class="section-badge">Contactos</span>
-          <h2><span>¿Necesitas ayuda?</span> <span class="highlight">Contáctanos</span></h2>
-        </div>
-
         <div class="contact-content">
           <div class="contact-info">
-            <div class="info-item">
-              <div class="info-icon">
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
-                  stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                  <path
-                    d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z">
-                  </path>
-                </svg>
-              </div>
-              <div>
-                <h3>Numero Telefónico</h3>
-                <a href="tel:+584127360431">+58 412-7360431 👩‍💻</a>
-                <a href="tel:+584243284360">+58 424-3284360 👨‍💻</a>
-              </div>
+            <div class="section-badge">
+              <i class="fas fa-envelope"></i>
+              <span>Contacto</span>
             </div>
-
-            <div class="info-item">
-              <div class="info-icon">
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
-                  stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                  <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
-                  <polyline points="22,6 12,13 2,6"></polyline>
-                </svg>
+            <h2>¿Necesitas ayuda? <span class="text-gradient">Contáctanos</span></h2>
+            
+            <div class="contact-methods">
+              <div class="contact-method">
+                <div class="contact-icon">
+                  <i class="fas fa-envelope"></i>
+                </div>
+                <div class="contact-details">
+                  <h3>Correo Electrónico</h3>
+                  <a href="mailto:raudie@raudie.net">raudie@raudie.net</a>
+                </div>
               </div>
-              <div>
-                <h3>Correos Electrónicos</h3>
-                <a href="mailto:raudie.dev@gmail.com">raudie.dev@gmail.com</a>
+
+              <div class="contact-method">
+                <div class="contact-icon">
+                  <i class="fab fa-whatsapp"></i>
+                </div>
+                <div class="contact-details">
+                  <h3>WhatsApp</h3>
+                  <a href="https://wa.me/+584243736030">Envíanos un mensaje</a>
+                </div>
               </div>
             </div>
           </div>
 
-          <div class="contact-form">
-            <form action="forms/contact.php" method="post" class="form">
+          <div class="contact-form-container">
+            <form class="contact-form" netlify>
               <div class="form-row">
                 <div class="form-group">
-                  <input type="text" name="name" placeholder="Tu Nombre" required>
+                  <input type="text" placeholder="Tu Nombre" required>
                 </div>
                 <div class="form-group">
-                  <input type="email" name="email" placeholder="Tu Email" required>
+                  <input type="email" placeholder="Tu Email" required>
                 </div>
               </div>
-
               <div class="form-group">
-                <input type="text" name="subject" placeholder="Asunto" required>
+                <input type="text" placeholder="Asunto" required>
               </div>
-
               <div class="form-group">
-                <textarea name="message" rows="6" placeholder="Mensaje" required></textarea>
+                <textarea placeholder="Mensaje" rows="6" required></textarea>
               </div>
-
-              <div class="form-submit">
-                <button type="submit" class="btn-primary">Enviar Mensaje</button>
-              </div>
+              <button type="submit" class="btn-primary">
+                <span>Enviar Mensaje</span>
+                <i class="fas fa-paper-plane"></i>
+              </button>
             </form>
           </div>
         </div>
       </div>
     </section>
   </main>
+
+  <!-- Footer -->
   <footer class="footer">
     <div class="container">
       <div class="footer-content">
@@ -634,59 +431,50 @@
           © <span>Copyright</span> <strong class="highlight">RauDie</strong> <span>All Rights Reserved</span>
         </p>
         <div class="social-links">
-          <a href="https://www.tiktok.com/@raudie.dev?lang=es" aria-label="Tiktok" target="_blank" rel="noopener noreferrer">
+          <a href="https://www.tiktok.com/@raudie.dev?lang=es" aria-label="Tiktok">
             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
               <path d="M9 0h1.98c.144.715.54 1.617 1.235 2.512C12.895 3.389 13.797 4 15 4v2c-1.753 0-3.07-.814-4-1.829V11a5 5 0 1 1-5-5v2a3 3 0 1 0 3 3z"/>
             </svg>
           </a>
-          <a href="#" aria-label="Facebook" target="_blank" rel="noopener noreferrer">
+          <a href="#" aria-label="Facebook">
             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
-              <path
-                d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951" />
+              <path d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951" />
             </svg>
           </a>
-          <a href="https://www.instagram.com/raudie.dev/" aria-label="Instagram" target="_blank" rel="noopener noreferrer">
+          <a href="https://www.instagram.com/raudie.dev/" aria-label="Instagram">
             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
-              <path
-                d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.9 3.9 0 0 0-1.417.923A3.9 3.9 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.9 3.9 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.9 3.9 0 0 0-.923-1.417A3.9 3.9 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599s.453.546.598.92c.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.5 2.5 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.5 2.5 0 0 1-.92-.598 2.5 2.5 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233s.008-2.388.046-3.231c.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92s.546-.453.92-.598c.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92m-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217m0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334" />
+              <path d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.9 3.9 0 0 0-1.417.923A3.9 3.9 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.9 3.9 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.9 3.9 0 0 0-.923-1.417A3.9 3.9 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599s.453.546.598.92c.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.5 2.5 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.5 2.5 0 0 1-.92-.598 2.5 2.5 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233s.008-2.388.046-3.231c.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92s.546-.453.92-.598c.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92m-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217m0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334" />
             </svg>
           </a>
-          <a href="https://www.linkedin.com/company/raudie" aria-label="LinkedIn" target="_blank" rel="noopener noreferrer">
+          <a href="https://www.linkedin.com/company/raudie" aria-label="LinkedIn">
             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
-              <path
-                d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854zm4.943 12.248V6.169H2.542v7.225zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248S2.4 3.226 2.4 3.934c0 .694.521 1.248 1.327 1.248h.016zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016l.016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225z" />
+              <path d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854zm4.943 12.248V6.169H2.542v7.225zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248S2.4 3.226 2.4 3.934c0 .694.521 1.248 1.327 1.248h.016zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016l.016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225z" />
             </svg>
           </a>
         </div>
-        <div class="credits">
-          Designed by <a href="https://portafolio-raulymar-de-abreu.netlify.app/" target="_blank" rel="noopener noreferrer">Raulymar De Abreu</a>
+        <div class="footer-credits">
+          Designed by <a href="https://portafolio-raulymar-de-abreu.netlify.app/" target="_blank">Raulymar De Abreu</a>
         </div>
       </div>
     </div>
   </footer>
-  
-  <!-- Floating WhatsApp Button -->
+
+  <!-- Botón flotante de WhatsApp -->
   <div class="floating-buttons">
-        <a href="https://wa.me/584127360431" class="floating-btn whatsapp-btn" target="_blank">
-            <i class="fab fa-whatsapp"></i>
-        </a>
-    </div>
+    <a href="https://wa.me/584243736030" class="floating-btn whatsapp-btn" target="_blank">
+      <i class="fab fa-whatsapp"></i>
+    </a>
+  </div>
+
   <!-- Scroll Top Button -->
   <a href="#" id="scroll-top" class="scroll-top" aria-label="Volver arriba">
-    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-      stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
       <polyline points="18 15 12 9 6 15"></polyline>
     </svg>
   </a>
 
-  <!-- Preloader -->
-  <div id="preloader" style="animation: fadeOutPreloader 1s ease 2s forwards;">
-    <div class="loader"></div>
-  </div>
   <!-- JavaScript -->
-  <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
   <script src="script.js"></script>
-  <script async src="https://www.tiktok.com/embed.js"></script>
 </body>
 
 </html>
