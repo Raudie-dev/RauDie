@@ -90,6 +90,59 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   // =============================================
+  // FORMULARIO DE CONTACTO OPTIMIZADO
+  // =============================================
+
+document.addEventListener("DOMContentLoaded", () => {
+  const contactForm = document.querySelector(".contact-form");
+
+  if (contactForm) {
+    contactForm.addEventListener("submit", async (e) => {
+      e.preventDefault();
+
+      const form = e.target;
+      const formData = new FormData(form);
+      const submitBtn = form.querySelector('button[type="submit"]');
+      const originalText = submitBtn.innerHTML;
+
+      submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Enviando...';
+      submitBtn.disabled = true;
+
+      try {
+        const response = await fetch("send_email.php", {
+          method: "POST",
+          body: formData,
+        });
+
+        if (!response.ok) {
+          throw new Error(`HTTP error ${response.status}`);
+        }
+
+        const result = await response.json();
+
+        if (result.success) {
+          submitBtn.innerHTML = '<i class="fas fa-check"></i> ¡Enviado!';
+          submitBtn.style.background = "#10b981";
+          form.reset();
+        } else {
+          throw new Error(result.message || "Error desconocido en el servidor.");
+        }
+      } catch (error) {
+        submitBtn.innerHTML = '<i class="fas fa-exclamation-triangle"></i> Error';
+        submitBtn.style.background = "#ef4444";
+        alert("Error al enviar el mensaje: " + error.message);
+      } finally {
+        setTimeout(() => {
+          submitBtn.innerHTML = originalText;
+          submitBtn.disabled = false;
+          submitBtn.style.background = "";
+        }, 2000);
+      }
+    });
+  }
+});
+
+  // =============================================
   // SCROLL TO TOP OPTIMIZADO
   // =============================================
 
